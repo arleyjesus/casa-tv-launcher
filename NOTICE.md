@@ -11,3 +11,5 @@ Projectivy and community Android TV experiments informed testing and compatibili
 Uses Android framework APIs and the JDK/Android SDK build tools. These tools are installed separately and are not bundled.
 
 The 0.4 control center uses original Canvas icons and native Android views. Apple/tvOS design guidance is a visual reference; no Apple interface assets or source code are included, and there is no Apple affiliation. Device-specific TCL Guard research is credited in docs/TCL-C645-GUARD.es.md; no Guard Manager application code or binary is bundled.
+
+The 0.6 fjord and forest landscapes were generated for Casa with the built-in image generator. All three bundled landscapes are original project assets under MIT. Their generation prompts are recorded in docs/AMBIENT-ART-PROMPTS.md.

@@ -13,7 +13,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 ## Qué ofrece
 
 - Inicio sin anuncios propios, cuentas ni conexión a Internet desde Casa.
-- Cuatro favoritas grandes en Inicio; conserva hasta seis guardadas y permite ordenarlas con el mando.
+- Diseños Clásico, Moderno e Inmersivo; hasta seis favoritas guardadas y ordenables con el mando.
 - Biblioteca completa al bajar desde una app, con tarjetas reutilizables.
 - Entradas HDMI y un acceso específico para jugar con la laptop.
 - Panel rápido que abre los ajustes originales de TCL.
@@ -26,7 +26,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 ## Estado del proyecto
 
-**Versión actual: v0.5.0.** Inicio de cuatro aplicaciones, accesos agrupados y biblioteca al bajar con el mando. El centro de control de 0.4 se conserva. Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
+**Versión actual: v0.6.0.** Tres diseños seleccionables y ambiente con tres paisajes, tiempos, transiciones y zoom opcional. [Guía de diseños y ambiente](docs/DISENOS-AMBIENTE.es.md). Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
 
 [Laptop, HDMI y modo Juego](docs/JUGAR-C645.es.md)
 

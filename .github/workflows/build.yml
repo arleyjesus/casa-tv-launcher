@@ -21,6 +21,9 @@ jobs:
       - name: Test Home redirect policy
         shell: pwsh
         run: ./scripts/test-home.ps1
+      - name: Test display option bounds
+        shell: pwsh
+        run: ./scripts/test-display-options.ps1
       - name: Build unsigned APK with installed Android SDK
         shell: pwsh
         run: ./scripts/build.ps1

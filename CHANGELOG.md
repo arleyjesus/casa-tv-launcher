@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.6.0] — 2026-10-25
+
+- Selectable Classic, Modern and Immersive home layouts with preserved favorites.
+- Selection-driven miniature background blur and contextual app title in Immersive.
+- Three bundled ambient landscapes, timed rotation, cut/fade, optional zoom and time-based first image.
+- Shared preview/screensaver lifecycle; off-thread decoding and stopped work on exit.
+- Optional design/ambient fields in schema-1 backups, retaining legacy backup support.
+- Kept offline permissions and existing Home service scope. Remote gallery/video remain planned.
+
+
 ## [0.5.0] — 2026-10-25
 
 - Four larger home cards with lighter outlines; grouped inputs, gaming, settings and library controls.

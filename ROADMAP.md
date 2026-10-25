@@ -41,3 +41,12 @@ These are planned priorities, not guarantees or a release schedule.
 ## Outside the launcher
 
 Universal debloat, root, firmware flashing, removal of the original Google launcher and replacement of proprietary picture/game processing are not project features. Device-specific tuning belongs in separately reviewed documentation and must remain reversible.
+
+## Design and ambient phases
+
+- Shipped in 0.6: three presets, three local landscapes and local timing/effect controls.
+- Next: opt-in GitHub catalog and bounded downloads, with offline fallback.
+- Later: URL video after decoder, buffer and lifecycle testing; evaluate official YouTube playback separately.
+- Research: adaptive selection and TV-specific capabilities, without claiming access to TCL AIPQ.
+
+See [design and ambient guide](docs/DISENOS-AMBIENTE.es.md).

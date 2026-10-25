@@ -6,7 +6,7 @@ Developed and tested specifically on **TCL 50C645 / Android 11 / V652**. Previou
 
 **0.4 pre-release:** a native card-based control center and compact centered dialogs, preserving Casa's existing artwork. Native TCL panels are unchanged; no TV-wide speedup is claimed.
 
-**Current release: 0.5.0.** Four larger home favorites, grouped TV controls, a lazy, recycled app library opened with Down, and a gaming entry point. Six stored favorites remain intact. The HDMI guide is specific to the tested 50C645; a physical laptop video signal has not yet been validated. [Gaming guide](docs/JUGAR-C645.es.md).
+**Current release: 0.6.0.** Choose Classic, Modern or Immersive under Appearance. Ambient mode includes three landscapes, rotation, cut/fade and optional zoom. Favorites and legacy backups are retained. [Design and ambient guide (Spanish)](docs/DISENOS-AMBIENTE.es.md).
 
 [Download APK / releases](https://github.com/arleyjesus/casa-tv-launcher/releases) · [Español](README.md) · [Compatibility](docs/COMPATIBILITY.md)
 
@@ -25,7 +25,7 @@ Casa does **not** require Projectivy or root. Keep the original Google TV launch
 
 ## Tested device and compatibility
 
-An additional **v0.3.0 pre-release** adjusts Home event handling and adds a regression test. It does not establish a general TV performance improvement or fix native TCL panel stutter. Version 0.2.0 remains the reference download.
+Native TCL panel stutter remains unresolved. This release changes Casa and does not establish a TV-wide speedup.
 
 Tested on **TCL 50C645, Android 11, firmware V8-R51MT05-LF1V652.021344**. The manifest supports API 26+, but other devices are unverified. HDMI/settings integration is TCL-specific and three HDMI inputs are offered in the input menu. The UI is currently Spanish-only.
 

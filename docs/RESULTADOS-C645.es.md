@@ -74,3 +74,7 @@ La IA de imagen «Foto Inteligente → Contenido adaptable» se observó activad
 Se conserva el paisaje y la paleta cálida de Casa. La referencia de tvOS se limita a jerarquía, espacios, tarjetas y foco claro: no se copian gráficos de Apple ni se añade desenfoque en tiempo real. El diseño usa vistas nativas e iconos dibujados, sin imágenes adicionales ni servicios.
 
 Referencias de contexto, no benchmarks de nuestra TV: [TV Detox](https://github.com/Ansub/tv-detox), [CleanYourTV](https://github.com/Gathin23/cleanyourtv), [foco y selección en las guías de Apple](https://developer.apple.com/design/human-interface-guidelines/focus-and-selection/).
+
+## 0.6.0 · 2026-10-25
+
+Tres presets seleccionados y revisados en el TV. Rotación de desierto, fiordo y bosque comprobada en la vista previa. CasaDream arrancó como salvapantallas real y quedó enlazado al gestor de sueños de Android; se salió con el mando. Se conservaron las seis favoritas y los tres ajustes anteriores tras actualizar. Pasaron las pruebas de Home, valores de diseño/ambiente y contrato de permisos. No se repitieron mediciones de RAM ni se demuestra una mejora de los paneles TCL. Las opciones de movimiento no cuentan aún con una prueba prolongada.
