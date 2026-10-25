@@ -1,5 +1,7 @@
 # Maintainer release checklist
 
+Work locally until a version's changes and focused checks are complete. Publish the finished commit, matching version tag and Release together; do not upload intermediate UI experiments. Write short release notes describing what changed, what was tested and any remaining limits. Keep existing release assets unchanged.
+
 1. Update manifest versionName and monotonically increase versionCode.
 2. Update CHANGELOG, compatibility evidence and release notes. Mark experimental versions as pre-releases.
 3. Compile from a clean checkout using the documented SDK/JDK and run scripts/verify-apk.ps1.

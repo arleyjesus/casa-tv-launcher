@@ -14,6 +14,8 @@ These are planned priorities, not guarantees or a release schedule.
 - Keep a versioned C645 results journal and distinguish measurements of Casa from Android/TCL panels.
 - Extend Casa Aura's card-based control center while retaining the existing visual identity and low rendering cost.
 - Validate the 0.4 redesign over longer sessions before promoting it from pre-release.
+- Name HDMI inputs and remember the preferred gaming input, after physical-source testing.
+- Consider a local library search and launcher-only recent apps; avoid network widgets or periodic background refresh.
 
 - Extract device-specific behavior into adapters instead of assuming TCL packages and three HDMI ports.
 - Detect available inputs; support custom names and gracefully handle devices without a tuner.

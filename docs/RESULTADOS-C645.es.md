@@ -12,6 +12,22 @@ Actualizado: **25 de octubre de 2026**. Android 11 / V8-R51MT05-LF1V652.021344, 
 | Protección individual de Guard | Casa en listas activa/persistente después de reinicio; tres retornos desde YouTube y suspensión/reactivación comprobados | Ajuste externo al APK; ver [guía de Guard](TCL-C645-GUARD.es.md) |
 | Retirada selectiva autorizada | Hola, Proton VPN, Mercado Play, Projectivy y QIYI retirados, con APK respaldados; otras apps de streaming conservadas | Quitar una app inactiva no demuestra ganar FPS |
 | Casa Aura 0.4 preliminar | Centro de control de nueve tarjetas, iconos propios y paneles secundarios adaptados a su contenido | Rediseña Casa, no los paneles propietarios del firmware |
+| Casa Aura 0.5 | Cuatro apps más grandes, entradas agrupadas, biblioteca al bajar y acceso de juego | Señal física de laptop y modo Juego efectivo aún sin comprobar |
+
+## Validación de 0.5
+
+- Navegación desde Inicio a la biblioteca y regreso con Arriba/Atrás, conservando la selección anterior.
+- Se mantienen las seis favoritas guardadas y las opciones de apariencia; cuatro se muestran en Inicio.
+- El botón de juego abre su panel de Casa. Desde «Jugar en HDMI 1» se comprobó la apertura de `com.tcl.tv/.TVActivity`. Sin una laptop conectada no se valida resolución, vídeo, audio ni latencia.
+- Catálogo cargado en el trabajador existente; las tarjetas y su distribución se reutilizan. Reabrir sin cambios no vuelve a vincular todos los iconos.
+- Caché de 24 miniaturas, entre 96 y 192 píxeles de lado. A 128 píxeles son aproximadamente 1,5 MiB de píxeles para esa caché; no equivale a la memoria total del proceso.
+- Se retiró la animación de todo el panel y se evita animar las favoritas detrás durante la transferencia de foco. No se añade actividad periódica en segundo plano.
+
+En la última muestra del APK final, los contadores de la misma ventana pasaron de **38 a 47 frames** y de **6 a 9 frames lentos** durante tres aperturas/cierres con la biblioteca cargada: nueve frames adicionales, tres lentos. Es una prueba breve de apertura, no una medición de FPS sostenidos ni una promesa de ausencia de tirones. Muestras anteriores dieron resultados distintos; no se selecciona únicamente la más favorable.
+
+La lectura de memoria de ese momento fue **75.831 KiB de PSS, 168.184 KiB de RSS y 215 KiB de Swap PSS**. El catálogo completo añade recursos respecto a un Inicio que no lo ha abierto; esta lectura no demuestra una reducción frente a 0.4. No se forzó recolección de memoria para obtenerla.
+
+La guía de [laptop y modo Juego](JUGAR-C645.es.md) separa el puerto recomendado de las capacidades que faltan por probar. Los cambios de interfaz de 0.5 no alteran el procesamiento de imagen del TV.
 
 ## Ajustes nativos: lo que sigue pendiente
 

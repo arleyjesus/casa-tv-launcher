@@ -6,7 +6,7 @@ Para el dispositivo de referencia, consulta además [protección de memoria de T
 
 ## Antes de instalar
 
-v0.2.0 es una versión preliminar. El equipo comprobado es TCL 50C645, Android 11, V8-R51MT05-LF1V652.021344. No instales firmware de otro modelo para usar Casa. Guarda una vía para abrir los ajustes originales y conserva habilitados Google TV y los servicios TCL.
+La versión actual se prueba en TCL 50C645, Android 11, V8-R51MT05-LF1V652.021344. No instales firmware de otro modelo para usar Casa. Guarda una vía para abrir los ajustes originales y conserva habilitados Google TV y los servicios TCL.
 
 Descarga la APK y SHA256SUMS.txt desde [Releases](https://github.com/arleyjesus/casa-tv-launcher/releases). No hace falta Projectivy, root, una cuenta de Casa ni aplicar debloat.
 
@@ -19,7 +19,7 @@ Ejemplo con la IP y el puerto que correspondan a tu televisor:
 ```powershell
 ./adb.exe connect "IP_DEL_TV:PUERTO_ADB"
 ./adb.exe devices -l
-./adb.exe -s "IP_DEL_TV:PUERTO_ADB" install -r ./Casa-TV-Launcher-v0.2.0.apk
+./adb.exe -s "IP_DEL_TV:PUERTO_ADB" install -r ./Casa-Aura-TV-v0.5.0.apk
 ./adb.exe -s "IP_DEL_TV:PUERTO_ADB" shell am start -n tv.casa.launcher/.MainActivity
 ```
 

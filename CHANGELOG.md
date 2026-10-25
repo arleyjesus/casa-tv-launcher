@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.0] — 2026-10-25
+
+- Four larger home cards with lighter outlines; grouped inputs, gaming, settings and library controls.
+- Recycled six-column app library, created on demand and opened with Down. Back/Up returns to the prior home selection.
+- Background app discovery, 24 cached icon thumbnails capped at 192 pixels, and direct opening without panel opacity or position animation.
+- Gaming panel with HDMI 1, input selection and the original TCL game-panel entry point. No automatic picture-mode changes.
+- Kept the six stored favorites and backup format; only the first four appear on Home.
+- Added the laptop/HDMI guide and recorded device validation. Physical PC video and latency remain untested.
+
 ## [0.4.0] — pre-release, 2026-10-25
 
 - Renamed the visible application to Casa Aura TV; retained package, certificate and preferences.

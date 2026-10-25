@@ -13,7 +13,7 @@ The current lightweight build uses aapt2, javac, d8, jar and zipalign, without e
 
 ```powershell
 ./scripts/build.ps1
-./scripts/verify-apk.ps1 -ApkPath ./build/Casa-TV-Launcher-v0.2.0-unsigned.apk
+./scripts/verify-apk.ps1 -ApkPath ./build/Casa-TV-Launcher-v0.5.0-unsigned.apk
 ```
 
 You can pass `-AndroidSdk`, `-JavaHome`, `-AndroidPlatform` and `-BuildToolsVersion` explicitly. The default platform is the newest installed numeric SDK platform; the manifest still controls minSdk/targetSdk. No device is contacted by the build script.

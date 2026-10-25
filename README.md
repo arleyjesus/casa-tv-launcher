@@ -13,8 +13,9 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 ## Qué ofrece
 
 - Inicio sin anuncios propios, cuentas ni conexión a Internet desde Casa.
-- Hasta seis favoritas, editables y ordenables con el mando.
-- Lista de aplicaciones instaladas y accesos a entradas HDMI.
+- Cuatro favoritas grandes en Inicio; conserva hasta seis guardadas y permite ordenarlas con el mando.
+- Biblioteca completa al bajar desde una app, con tarjetas reutilizables.
+- Entradas HDMI y un acceso específico para jugar con la laptop.
 - Panel rápido que abre los ajustes originales de TCL.
 - Paisaje estático, reloj y selección discreta; sin vídeo de fondo.
 - Opciones para ocultar título/reloj y desactivar la animación de selección.
@@ -25,11 +26,17 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 ## Estado del proyecto
 
-**Rediseño preliminar: v0.4.0 · Casa Aura TV.** Centro de control por tarjetas, paneles centrados y nombre propio, manteniendo el paisaje y la identidad de Casa. La v0.3 ajusta el servicio de Inicio. Ninguna demuestra una aceleración general ni resuelve los tirones de los paneles TCL. La v0.2.0 permanece como descarga de referencia.
+**Versión actual: v0.5.0.** Inicio de cuatro aplicaciones, accesos agrupados y biblioteca al bajar con el mando. El centro de control de 0.4 se conserva. Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
+
+[Laptop, HDMI y modo Juego](docs/JUGAR-C645.es.md)
+
+![Inicio de Casa Aura TV 0.5](docs/images/aura-home-05.png)
+
+![Biblioteca de aplicaciones](docs/images/aura-library-05.png)
 
 ![Centro de control de Casa Aura TV](docs/images/aura-control.png)
 
-**Vista previa pública: v0.2.0.** Se desarrolló y probó en un **TCL 50C645 con Android 11 y firmware V8-R51MT05-LF1V652.021344**. El manifiesto permite Android 8.0/API 26 o posterior, pero otros modelos y versiones aún no están validados.
+Se desarrolló y probó en un **TCL 50C645 con Android 11 y firmware V8-R51MT05-LF1V652.021344**. El manifiesto permite Android 8.0/API 26 o posterior, pero otros modelos y versiones aún no están validados.
 
 Los accesos a ajustes y entradas incluyen comportamiento específico de TCL. La interfaz está actualmente en español. Las tres entradas HDMI están fijadas en esta versión. Consulta la [matriz de compatibilidad y limitaciones](docs/COMPATIBILITY.md) antes de instalar.
 
@@ -38,7 +45,7 @@ Los accesos a ajustes y entradas incluyen comportamiento específico de TCL. La 
 1. Descarga la APK de una [versión publicada](https://github.com/arleyjesus/casa-tv-launcher/releases).
 2. Instálala y ábrela primero como una aplicación normal.
 3. Prueba navegación, aplicaciones, imagen, sonido y entradas antes de cambiar Inicio.
-4. Si quieres que Home abra Casa, activa **Casa · Botón Inicio** en Accesibilidad.
+4. Si quieres que Home abra Casa, activa **Casa Aura · Botón Inicio** en Accesibilidad.
 
 La [guía completa](docs/INSTALL.es.md) explica ADB, actualización conservando datos, autoarranque TCL, ambiente y cómo volver al inicio anterior. **No se necesita aplicar una lista de debloat para usar Casa.**
 
