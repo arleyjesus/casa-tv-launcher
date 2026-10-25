@@ -16,7 +16,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 - Diseños Clásico, Moderno e Inmersivo; hasta seis favoritas guardadas y ordenables con el mando.
 - Biblioteca completa al bajar desde una app, con tarjetas reutilizables.
 - Entradas HDMI y un acceso específico para jugar con la laptop.
-- Panel rápido que abre los ajustes originales de TCL.
+- Control de Contenido adaptable de TCL con permiso opcional, y acceso a sus ajustes originales.
 - Paisaje estático, reloj y selección discreta; sin vídeo de fondo.
 - Opciones para ocultar título/reloj y desactivar la animación de selección.
 - Copias locales y restauración de favoritas y apariencia.
@@ -26,7 +26,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 ## Estado del proyecto
 
-**Versión actual: v0.7.0.** Tres diseños seleccionables, ambiente configurable y galería de GitHub con descarga manual. [Guía de la galería](docs/GALERIA.es.md). [Guía de diseños y ambiente](docs/DISENOS-AMBIENTE.es.md). Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
+**Versión actual: v0.8.0.** Panel de Contenido adaptable de TCL con lectura, cambio y deshacer. [Guía de imagen](docs/IMAGEN-TCL.es.md). Conserva los tres diseños, el ambiente y la galería de GitHub. [Guía de la galería](docs/GALERIA.es.md). [Guía de diseños y ambiente](docs/DISENOS-AMBIENTE.es.md). Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
 
 [Laptop, HDMI y modo Juego](docs/JUGAR-C645.es.md)
 

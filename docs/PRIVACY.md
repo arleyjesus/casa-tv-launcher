@@ -21,3 +21,9 @@ Casa queries activities that advertise Android TV or standard launcher categorie
 The shell export endpoint is protected by android.permission.DUMP and exports Casa settings only. It does not accept caller-provided output paths or execute shell commands.
 
 Opening another app or the original TV settings transfers control to that app; their permissions and data practices are separate from Casa's.
+
+## Optional TCL picture controls (0.8+)
+
+The image panel uses the installed TCL Settings Slice provider. Android asks whether Casa may display and act on Configuración fragments. Do not select access to any app. This is separate from Accessibility and does not grant screen capture or access to video frames. Casa requests this permission only after pressing its permission button.
+
+The module reads the one validated adaptive-content row and sends its original TCL action only after an explicit image-control button press. It stores the preceding boolean and time locally for Undo. These device-specific values are excluded from configuration exports. No image states or picture data are uploaded. No extra service or automatic image switching is introduced. Permission survives app updates; uninstalling Casa removes its access.

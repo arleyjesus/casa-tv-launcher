@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.8.0] — 2026-10-25
+
+- Added an optional TCL adaptive-content panel with native Android permission flow.
+- Reads current state, saves an undo value before changing and verifies the result; never retries a toggle automatically.
+- Accepts only the validated enabled TCL row and a single trusted toggle action.
+- Keeps original TV settings available and disables image changes when state cannot be verified.
+- No vendor SDK, credentials, root, secure-settings grant or background image adjustment.
+- Fixed About text to describe the manual network access introduced in 0.7.
+
+
 ## [0.7.0] — 2026-10-25
 
 - Added a manually downloaded GitHub ambient gallery, disabled by default.

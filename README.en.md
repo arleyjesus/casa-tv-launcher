@@ -6,7 +6,7 @@ Developed and tested specifically on **TCL 50C645 / Android 11 / V652**. Previou
 
 **0.4 pre-release:** a native card-based control center and compact centered dialogs, preserving Casa's existing artwork. Native TCL panels are unchanged; no TV-wide speedup is claimed.
 
-**Current release: 0.7.0.** Choose Classic, Modern or Immersive under Appearance. Ambient mode includes three landscapes, rotation, cut/fade and optional zoom. Favorites and legacy backups are retained. Version 0.7 adds an optional, manually downloaded GitHub gallery with bounded local storage. [Gallery guide (Spanish)](docs/GALERIA.es.md). [Design and ambient guide (Spanish)](docs/DISENOS-AMBIENTE.es.md).
+**Current release: 0.8.0.** Added a verified TCL adaptive-content control with Android Slice consent, fresh state reads and undo. [Picture guide (Spanish)](docs/IMAGEN-TCL.es.md). Choose Classic, Modern or Immersive under Appearance. Ambient mode includes three landscapes, rotation, cut/fade and optional zoom. Favorites and legacy backups are retained. Version 0.7 adds an optional, manually downloaded GitHub gallery with bounded local storage. [Gallery guide (Spanish)](docs/GALERIA.es.md). [Design and ambient guide (Spanish)](docs/DISENOS-AMBIENTE.es.md).
 
 [Download APK / releases](https://github.com/arleyjesus/casa-tv-launcher/releases) · [Español](README.md) · [Compatibility](docs/COMPATIBILITY.md)
 

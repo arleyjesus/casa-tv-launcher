@@ -82,3 +82,7 @@ Tres presets seleccionados y revisados en el TV. Rotación de desierto, fiordo y
 ## 0.7.0 · 2026-10-25
 
 Descarga manual desde el catálogo público de GitHub, activación y vista previa de los tres archivos comprobadas. Cancelar una actualización y volver a abrir conservó tres fondos completos. Borrar las descargas seleccionó los integrados y su vista previa funcionó. Se corrigió el recorte de texto de los botones observado en la primera prueba. Al terminar se dejó Moderno, 120 s, disolución y movimiento apagado; la galería remota quedó desactivada y sin archivos de prueba. Favoritas conservadas. No se hizo una desconexión de red ni una prueba prolongada de consumo.
+
+## 0.8.0 · 2026-10-25
+
+El control verificado se integró en Casa: permiso de Android solo para Configuración, lectura OFF, activación ON confirmada, Deshacer a OFF y reapertura sin cambios automáticos. La actualización y una instalación posterior de la misma versión conservaron el permiso. La comparación de exportaciones confirmó favoritas, preset y opciones de ambiente intactos. El registro de errores revisado no mostró fallos del proceso. No se verificó vídeo en reproducción, HDR por fuente ni mejora de los paneles nativos.

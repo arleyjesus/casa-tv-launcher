@@ -27,6 +27,9 @@ jobs:
       - name: Test gallery download limits
         shell: pwsh
         run: ./scripts/test-gallery.ps1
+      - name: Test TCL picture action policy
+        shell: pwsh
+        run: ./scripts/test-picture.ps1
       - name: Build unsigned APK with installed Android SDK
         shell: pwsh
         run: ./scripts/build.ps1

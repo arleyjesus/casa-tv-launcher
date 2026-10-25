@@ -50,3 +50,9 @@ Universal debloat, root, firmware flashing, removal of the original Google launc
 - Research: adaptive selection and TV-specific capabilities, without claiming access to TCL AIPQ.
 
 See [design and ambient guide](docs/DISENOS-AMBIENTE.es.md).
+
+## TV image controls
+
+- Shipped in 0.8: explicit native TCL adaptive-content control, verified on C645/V652, with user permission and undo.
+- Pending: source/SDR/HDR behavior, permission revocation flows on different firmware, other real picture parameters and video-overlay behavior.
+- Dynamic profiles require verified state/control for each parameter. No programmable AIPQ interface has been established.
