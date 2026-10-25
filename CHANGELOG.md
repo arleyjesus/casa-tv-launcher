@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.0 · 2026-10-25
+
+- Paleta negra/azul, paneles coherentes y degradado inferior en Inicio y Ambiente.
+- Cuatro niveles de efectos visuales incluidos en las copias de apariencia.
+- Centro de Juegos con nombres HDMI editables, estado de Android y aperturas desde Casa.
+- Acceso verificado a accesorios TCL, filtro para mandos y batería solo cuando el sistema la entrega.
+- Navegador web a petición con tres catálogos, favoritos, recientes y pantalla completa.
+- Compilación de clases mediante JAR para evitar el límite de longitud de comandos de Windows.
+- Sin nuevos permisos, automatización de imagen ni vídeos integrados.
+
 ## [0.8.0] — 2026-10-25
 
 - Added an optional TCL adaptive-content panel with native Android permission flow.

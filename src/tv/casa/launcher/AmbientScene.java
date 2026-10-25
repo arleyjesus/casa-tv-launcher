@@ -31,7 +31,8 @@ final class AmbientScene extends FrameLayout {
         super(context);setBackgroundColor(0xFF101319);setClipChildren(true);
         pictures=new FrameLayout(context);pictures.setClipChildren(true);addView(pictures,new LayoutParams(-1,-1));
         for(int i=0;i<2;i++){images[i]=new ImageView(context);images[i].setScaleType(ImageView.ScaleType.CENTER_CROP);pictures.addView(images[i],new LayoutParams(-1,-1));}
-        clock=new TextView(context);clock.setTextColor(MainActivity.INK);clock.setTextSize(27);clock.setTypeface(Typeface.create("serif",0));clock.setGravity(Gravity.RIGHT);clock.setLineSpacing(8,1.1f);clock.setShadowLayer(8,0,2,0xCC000000);
+        addView(new CinematicShade(context),new LayoutParams(-1,-1));
+        clock=new TextView(context);clock.setTextColor(MainActivity.INK);clock.setTextSize(27);clock.setTypeface(Typeface.create("sans-serif-light",0));clock.setGravity(Gravity.RIGHT);clock.setLineSpacing(8,1.1f);clock.setShadowLayer(8,0,2,0xCC000000);
         LayoutParams lp=new LayoutParams(-2,-2,Gravity.BOTTOM|Gravity.RIGHT);lp.setMargins(60,40,70,65);addView(clock,lp);
     }
     SharedPreferences prefs(){return Configuration.prefs(getContext());}

@@ -3,6 +3,8 @@ public final class DisplayOptionsTest {
     static void check(boolean value){if(!value)throw new AssertionError();}
     public static void main(String[] args){
         for(String p:new String[]{"classic","modern","immersive"})check(DisplayOptions.valid("preset",p));
+        for(String v:new String[]{"off","low","medium","high"})check(DisplayOptions.valid("visualEffects",v));
+        check(!DisplayOptions.valid("visualEffects","ultra"));check(!DisplayOptions.valid("visualEffects",true));
         check(!DisplayOptions.valid("preset","unknown"));check(!DisplayOptions.valid("preset",null));
         check(!DisplayOptions.valid("ambientIntervalSec",0));check(!DisplayOptions.valid("ambientIntervalSec",1));check(!DisplayOptions.valid("ambientIntervalSec",30.0));
         check(DisplayOptions.valid("ambientIntervalSec",30));check(DisplayOptions.valid("ambientIntervalSec",600));

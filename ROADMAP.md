@@ -14,7 +14,7 @@ These are planned priorities, not guarantees or a release schedule.
 - Keep a versioned C645 results journal and distinguish measurements of Casa from Android/TCL panels.
 - Extend Casa Aura's card-based control center while retaining the existing visual identity and low rendering cost.
 - Validate the 0.4 redesign over longer sessions before promoting it from pre-release.
-- Name HDMI inputs and remember the preferred gaming input, after physical-source testing.
+- Shipped in 0.9: HDMI aliases, published input states and Casa-only last-open times. Physical-source validation and preferred-input behavior remain pending.
 - Consider a local library search and launcher-only recent apps; avoid network widgets or periodic background refresh.
 
 - Extract device-specific behavior into adapters instead of assuming TCL packages and three HDMI ports.
@@ -28,7 +28,7 @@ These are planned priorities, not guarantees or a release schedule.
 
 - Improve app icon and TV banner assets.
 - Add release certificate fingerprints and a repeatable maintainer signing process.
-- Keep network use explicit and limited to requested wallpaper downloads; any APK update checker requires a separate decision.
+- Keep network use explicit: manual wallpaper downloads and user-opened game browsing. Any APK update checker requires a separate decision.
 - Consider a standard Android Studio/Gradle project for easier community contributions.
 
 ## Later, if justified
@@ -56,3 +56,10 @@ See [design and ambient guide](docs/DISENOS-AMBIENTE.es.md).
 - Shipped in 0.8: explicit native TCL adaptive-content control, verified on C645/V652, with user permission and undo.
 - Pending: source/SDR/HDR behavior, permission revocation flows on different firmware, other real picture parameters and video-overlay behavior.
 - Dynamic profiles require verified state/control for each parameter. No programmable AIPQ interface has been established.
+
+## Game hub and media lifecycle
+
+- Shipped in 0.9: static dark/glass-style themes, bottom fade, visual quality selector, native HDMI/accessory hub and on-demand web games.
+- Pending: physical controller testing, browser game compatibility matrix, longer sessions and performance comparisons.
+- Future ambient video: typed image/video catalog, independent player, bounded buffering, HTTPS validation and release on pause/dream exit. Keep video outside the APK; reject unsupported catalog types rather than silently trying them.
+- YouTube requires a supported official integration; no stream-link extraction. Adaptive image profiles require verified vendor state/control per setting and source.

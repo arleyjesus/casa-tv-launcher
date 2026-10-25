@@ -49,3 +49,9 @@ Small controlled remote-navigation samples on the reference TV:
 These samples are not a device benchmark and do not isolate all background activity. They show no sustained navigation regression in the repeat, but do not prove faster TV-wide performance, lower total RAM use or faster streaming. Independent firmware tuning performed on the reference TV is not part of this application and is not required for installation.
 
 When reporting another device, distinguish observed success from untested features and include Casa, Android and firmware versions without private dumps.
+
+## 0.9 game hub
+
+C645/V652 HDMI entries are identified by the labels supplied by TvInputManager; their state is reported as-is. ARC/eARC is HDMI 3 on the reference unit. Physical PC/video handshake remains untested. Accessory settings use the TCL Android-TV action verified on this firmware. Controller detection is based on input axes/buttons and may need model-specific refinements; no physical gamepad has been validated. Battery reporting needs Android 12/API 31 and device support, so Android 11 shows unavailable.
+
+The integrated browser requires the system WebView component and Internet. Third-party games are not all remote-compatible and are not certified by Casa. It closes on exit; game sessions are not preserved. This does not replace TCL Game Master or alter image processing.

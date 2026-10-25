@@ -8,15 +8,16 @@ import java.util.ArrayList;
 final class HomeLayouts {
     static void create(MainActivity a){
         a.scale=a.getResources().getDisplayMetrics().widthPixels/960f;
-        a.root=new FrameLayout(a);a.root.setBackgroundColor(0xFF161310);a.setContentView(a.root);
+        a.root=new FrameLayout(a);a.root.setBackgroundColor(0xFF000000);a.setContentView(a.root);
         a.root.addView(MainActivity.background(a),new FrameLayout.LayoutParams(-1,-1));
         a.favoritesViews.clear();a.utilityViews.clear();
         String preset=a.preset();boolean classic=preset.equals("classic"),immersive=preset.equals("immersive");
-        if(immersive){ImageView glow=new ImageView(a);glow.setScaleType(ImageView.ScaleType.CENTER_CROP);glow.setAlpha(0.55f);a.root.addView(glow,new FrameLayout.LayoutParams(-1,-1));View shade=new View(a);shade.setBackgroundColor(0x880D1118);a.root.addView(shade,new FrameLayout.LayoutParams(-1,-1));a.backdrop=new FocusBackdrop(a,glow);}
+        if(immersive&&AuraTheme.level(a)>0){ImageView glow=new ImageView(a);glow.setScaleType(ImageView.ScaleType.CENTER_CROP);glow.setAlpha(0.55f);a.root.addView(glow,new FrameLayout.LayoutParams(-1,-1));View shade=new View(a);shade.setBackgroundColor(0x880D1118);a.root.addView(shade,new FrameLayout.LayoutParams(-1,-1));a.backdrop=new FocusBackdrop(a,glow);}
+        a.root.addView(new CinematicShade(a),new FrameLayout.LayoutParams(-1,-1));
         a.put(a.text("C A S A   A U R A",12,MainActivity.INK),38,26,260,24);
         a.clock=a.text("",15,MainActivity.INK);a.clock.setGravity(Gravity.RIGHT|Gravity.CENTER_VERTICAL);a.put(a.clock,758,26,90,24);
         TextView settings=a.button("⚙",a::showSettings);a.headerSettings=settings;settings.setTag("settings");settings.setContentDescription("Centro de control");a.put(settings,868,20,48,36);
-        a.hero=a.text("Tu espacio.",immersive?42:49,MainActivity.INK);a.hero.setTypeface(Typeface.create("serif",0));a.put(a.hero,38,immersive?150:240,650,72);
+        a.hero=a.text("Tu espacio.",immersive?42:49,MainActivity.INK);a.hero.setTypeface(Typeface.create("sans-serif-light",0));a.put(a.hero,38,immersive?150:240,650,72);
         ArrayList<String> packages=a.favoritePackages();
         if(immersive)immersive(a,packages);else if(classic)classic(a,packages);else modern(a,packages);
         if(a.favoritesViews.isEmpty()){TextView empty=a.button("Elegir favoritas",()->a.showApps(true));a.put(empty,38,356,220,80);a.favoritesViews.add(empty);}

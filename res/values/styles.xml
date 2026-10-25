@@ -1,1 +1,18 @@
-<resources><style name="AppTheme" parent="android:style/Theme.Material.NoActionBar"><item name="android:fontFamily">sans</item><item name="android:windowActionModeOverlay">true</item><item name="android:windowFullscreen">true</item><item name="android:colorAccent">#E8CBA5</item><item name="android:windowBackground">#161310</item><item name="android:windowLightStatusBar">false</item></style></resources>
+<resources>
+  <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+    <item name="android:fontFamily">sans</item>
+    <item name="android:windowActionModeOverlay">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:colorAccent">#8FDFFF</item>
+    <item name="android:windowBackground">#000000</item>
+    <item name="android:windowLightStatusBar">false</item>
+    <item name="android:alertDialogTheme">@style/AuraDialog</item>
+  </style>
+  <style name="AuraDialog" parent="android:style/Theme.Material.Dialog.Alert">
+    <item name="android:windowBackground">@drawable/aura_dialog</item>
+    <item name="android:colorAccent">#8FDFFF</item>
+    <item name="android:textColorPrimary">#F4F8FF</item>
+    <item name="android:textColorSecondary">#B3C1D2</item>
+    <item name="android:colorBackgroundFloating">#080D14</item>
+  </style>
+</resources>

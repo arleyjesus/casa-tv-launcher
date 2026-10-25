@@ -15,8 +15,7 @@ final class AuraControlPanel {
         a.closePanel();
         Dialog d=new Dialog(a);
         LinearLayout surface=new LinearLayout(a);surface.setOrientation(1);surface.setPadding(a.px(26),a.px(20),a.px(26),a.px(18));
-        GradientDrawable backdrop=new GradientDrawable(GradientDrawable.Orientation.TL_BR,new int[]{0xFA302D2A,0xFA191B1E});
-        backdrop.setCornerRadius(a.px(25));backdrop.setStroke(a.px(0.7f),0x667D7770);surface.setBackground(backdrop);
+        GradientDrawable backdrop=AuraTheme.panel(a,a.px(25));surface.setBackground(backdrop);
         LinearLayout header=new LinearLayout(a);header.setGravity(Gravity.CENTER_VERTICAL);
         LinearLayout words=new LinearLayout(a);words.setOrientation(1);
         TextView brand=a.text("C A S A   A U R A",10,MainActivity.GOLD);words.addView(brand,new LinearLayout.LayoutParams(-1,a.px(20)));

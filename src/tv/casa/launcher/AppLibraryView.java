@@ -17,13 +17,13 @@ final class AppLibraryView extends LinearLayout {
 
     AppLibraryView(MainActivity a){
         super(a);owner=a;setOrientation(VERTICAL);setPadding(a.px(24),a.px(15),a.px(24),a.px(12));
-        GradientDrawable surface=new GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,new int[]{0xFC302F2D,0xFE171A1D});surface.setCornerRadius(a.px(23));surface.setStroke(a.px(0.7f),0x99C5C0B8);setBackground(surface);
+        GradientDrawable surface=AuraTheme.panel(a,a.px(23));setBackground(surface);
         LinearLayout header=new LinearLayout(a);header.setGravity(Gravity.CENTER_VERTICAL);
         TextView title=a.text("Todas las aplicaciones",24,MainActivity.INK);header.addView(title,new LayoutParams(0,a.px(40),1));
         TextView close=a.button("×",a::closeLibrary);close.setContentDescription("Volver a Inicio");header.addView(close,new LayoutParams(a.px(40),a.px(36)));addView(header,new LayoutParams(-1,a.px(42)));
         count=a.text("Arriba para volver a Inicio",11,MainActivity.MUTED);addView(count,new LayoutParams(-1,a.px(25)));
         grid=new GridView(a);grid.setNumColumns(6);grid.setHorizontalSpacing(a.px(12));grid.setVerticalSpacing(a.px(10));grid.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);grid.setClipToPadding(false);grid.setPadding(a.px(3),a.px(5),a.px(3),a.px(5));
-        GradientDrawable outline=new GradientDrawable();outline.setColor(Color.TRANSPARENT);outline.setCornerRadius(a.px(15));outline.setStroke(a.px(2),0xFFFFF3E6);grid.setSelector(outline);grid.setDrawSelectorOnTop(true);grid.setAdapter(adapter);
+        GradientDrawable outline=new GradientDrawable();outline.setColor(Color.TRANSPARENT);outline.setCornerRadius(a.px(15));outline.setStroke(a.px(2),AuraTheme.ACCENT);grid.setSelector(outline);grid.setDrawSelectorOnTop(true);grid.setAdapter(adapter);
         grid.setOnItemClickListener((parent,view,position,id)->{String pkg=packages.get(position);a.closeLibrary();a.launch(pkg);});
         grid.setOnItemLongClickListener((parent,view,position,id)->{a.closeLibrary();a.showApps(true);return true;});
         grid.setOnKeyListener((view,key,event)->{if(event.getAction()==KeyEvent.ACTION_DOWN&&key==KeyEvent.KEYCODE_DPAD_UP&&grid.getSelectedItemPosition()<6){a.closeLibrary();return true;}return false;});

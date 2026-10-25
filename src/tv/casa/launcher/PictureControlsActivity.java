@@ -18,9 +18,9 @@ public final class PictureControlsActivity extends Activity {
     @Override public void onCreate(Bundle saved){super.onCreate(saved);worker=Executors.newSingleThreadExecutor();
         if(Build.VERSION.SDK_INT>=28)bridge=new TclPictureBridge(this);
         getWindow().getDecorView().setSystemUiVisibility(5894);
-        ScrollView scroll=new ScrollView(this);scroll.setFillViewport(true);scroll.setBackgroundColor(0xFF171B20);
+        ScrollView scroll=new ScrollView(this);scroll.setFillViewport(true);scroll.setBackgroundColor(0xFF020509);
         LinearLayout box=new LinearLayout(this);box.setOrientation(1);box.setGravity(Gravity.CENTER_VERTICAL);int pad=Math.round(getResources().getDisplayMetrics().widthPixels*0.10f);box.setPadding(pad,24,pad,24);scroll.addView(box);
-        TextView title=new TextView(this);title.setText("Imagen del televisor");title.setTextSize(30);title.setTypeface(Typeface.create("serif",0));title.setTextColor(MainActivity.INK);box.addView(title);
+        TextView title=new TextView(this);title.setText("Imagen del televisor");title.setTextSize(30);title.setTypeface(Typeface.create("sans-serif-light",0));title.setTextColor(MainActivity.INK);box.addView(title);
         TextView detail=new TextView(this);detail.setText("Contenido adaptable ajusta la imagen mediante el procesamiento original de TCL.\nControl verificado en C645 con V652. Se aplica al contexto que tenga activo el TV.\nCasa no cambia brillo, HDR ni calibración desde esta pantalla.");detail.setTextSize(16);detail.setTextColor(MainActivity.MUTED);box.addView(detail);
         status=new TextView(this);status.setTextSize(18);status.setTextColor(MainActivity.INK);status.setPadding(0,16,0,10);box.addView(status);
         permission=button(box,"Permitir controles de TCL",this::requestPermission);
@@ -31,7 +31,7 @@ public final class PictureControlsActivity extends Activity {
         button(box,"Volver",this::finish);setContentView(scroll);refresh.requestFocus();
     }
     private Button button(LinearLayout box,String text,Runnable action){Button b=new Button(this);b.setText(text);b.setAllCaps(false);b.setTextSize(17);b.setTextColor(MainActivity.INK);b.setPadding(12,0,12,0);b.setIncludeFontPadding(false);b.setMinHeight(0);b.setMinimumHeight(0);b.setGravity(Gravity.CENTER);
-        StateListDrawable styles=new StateListDrawable();for(boolean selected:new boolean[]{true,false}){GradientDrawable shape=new GradientDrawable();shape.setColor(selected?0xFF514C43:0xFF2D333B);shape.setCornerRadius(18);shape.setStroke(2,selected?0xFFFFE8C5:0xFF777E85);styles.addState(selected?new int[]{android.R.attr.state_focused}:new int[]{},shape);}b.setBackground(styles);
+        b.setBackground(AuraTheme.states(this,18,AuraTheme.ACCENT));
         LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(-1,Math.round(44*getResources().getDisplayMetrics().density));lp.topMargin=8;box.addView(b,lp);b.setOnClickListener(v->action.run());return b;
     }
     private void controls(){

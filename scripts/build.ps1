@@ -38,8 +38,10 @@ if ($LASTEXITCODE) { throw 'Resource linking failed.' }
 $sources = @(Get-ChildItem -LiteralPath (Join-Path $repoRoot 'src') -Recurse -Filter '*.java' | ForEach-Object FullName)
 & "$JavaHome\bin\javac.exe" -encoding UTF-8 --release 8 -classpath $androidJar -d $classesDir @sources
 if ($LASTEXITCODE) { throw 'Java compilation failed.' }
-$classes = @(Get-ChildItem -LiteralPath $classesDir -Recurse -Filter '*.class' | ForEach-Object FullName)
-& "$tools\d8.bat" --lib $androidJar --min-api 26 --output $dexDir @classes
+$classesJar = Join-Path $objectDir 'classes.jar'
+& "$JavaHome\bin\jar.exe" cf $classesJar -C $classesDir .
+if ($LASTEXITCODE) { throw 'Class packaging failed.' }
+& "$tools\d8.bat" --lib $androidJar --min-api 26 --output $dexDir $classesJar
 if ($LASTEXITCODE) { throw 'DEX compilation failed.' }
 Push-Location $dexDir
 try { & "$JavaHome\bin\jar.exe" uf $baseApk classes.dex } finally { Pop-Location }

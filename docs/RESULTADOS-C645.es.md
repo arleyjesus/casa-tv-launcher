@@ -71,7 +71,7 @@ La IA de imagen «Foto Inteligente → Contenido adaptable» se observó activad
 
 ![Centro de control de Casa Aura TV](images/aura-control.png)
 
-Se conserva el paisaje y la paleta cálida de Casa. La referencia de tvOS se limita a jerarquía, espacios, tarjetas y foco claro: no se copian gráficos de Apple ni se añade desenfoque en tiempo real. El diseño usa vistas nativas e iconos dibujados, sin imágenes adicionales ni servicios.
+Hasta 0.8 se conservaba el paisaje y la paleta cálida de Casa. La referencia de tvOS se limita a jerarquía, espacios, tarjetas y foco claro: no se copian gráficos de Apple ni se añade desenfoque en tiempo real. El diseño usa vistas nativas e iconos dibujados, sin imágenes adicionales ni servicios.
 
 Referencias de contexto, no benchmarks de nuestra TV: [TV Detox](https://github.com/Ansub/tv-detox), [CleanYourTV](https://github.com/Gathin23/cleanyourtv), [foco y selección en las guías de Apple](https://developer.apple.com/design/human-interface-guidelines/focus-and-selection/).
 
@@ -86,3 +86,16 @@ Descarga manual desde el catálogo público de GitHub, activación y vista previ
 ## 0.8.0 · 2026-10-25
 
 El control verificado se integró en Casa: permiso de Android solo para Configuración, lectura OFF, activación ON confirmada, Deshacer a OFF y reapertura sin cambios automáticos. La actualización y una instalación posterior de la misma versión conservaron el permiso. La comparación de exportaciones confirmó favoritas, preset y opciones de ambiente intactos. El registro de errores revisado no mostró fallos del proceso. No se verificó vídeo en reproducción, HDR por fuente ni mejora de los paneles nativos.
+
+
+## 0.9.0 · 2026-10-25
+
+Se revisaron Clásico, Moderno e Inmersivo con la paleta negra/azul y el degradado inferior. Ambiente abrió con el nuevo fundido inferior; no se cambiaron sus tiempos ni se activó movimiento. Se seleccionaron Altos, Desactivados y Bajos; la exportación incluyó el nivel elegido y conservó las seis favoritas. Bajos quedó seleccionado y se restauró el diseño Clásico que estaba activo antes de estas pruebas.
+
+El Centro de Juegos detectó las tres entradas HDMI, GeForce NOW y Google Play Games. Android publicó «en espera» en los tres puertos; no se presenta como prueba de señal conectada. Se abrió el servicio original del TV y se verificaron el editor HDMI, guardar y restablecer un nombre y la pulsación larga corregida para evitar que se abra la fuente al editar. No se validó imagen de una laptop, resolución negociada ni latencia HDMI.
+
+Desde Casa se abrió la pantalla real de accesorios. Se excluyeron el control remoto TCL y virtual-search, que el firmware anunciaba parcialmente como gamepad. No había un mando físico de juego para validar conexión, reconexión o batería. La información no disponible se muestra como tal.
+
+TIC-80 cargó en el WebView del TV. Guardar un favorito, volver a verlo en el Centro de Juegos, ampliar la página y salir con Atrás funcionaron. La actividad del navegador quedó finalizada al salir. Esto valida el catálogo y la navegación, no una partida completa ni la compatibilidad de todos los juegos. PICO-8 y DOS Zone se comprobaron como fuentes oficiales en la web; sus juegos no se probaron en el TV.
+
+Pasaron las pruebas de Home, límites de apariencia, galería, política de imagen y URLs del navegador, junto con el contrato de permisos y la firma del APK. El registro revisado no mostró excepciones de Casa. No se hizo un benchmark de FPS/RAM, una prueba prolongada ni una comparación de los paneles nativos de TCL. No se cambió la calibración, AIPQ o Contenido adaptable para esta versión.
