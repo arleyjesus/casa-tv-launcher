@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.3.0] — local candidate, not published
+## [0.3.0] — pre-release, 2026-10-25
 
 - Home accessibility event timeout reduced from 200 ms to zero.
 - Duplicate-event suppression reduced from 1,200 ms to 150 ms, with a regression test for a subsequent Home action.
@@ -9,7 +9,8 @@
 - No additional permissions, package disabling or native TV settings changes.
 - On-device installation and service binding passed. A first measured redirect took 804 ms after event receipt; a faster end-to-end Home return has **not** been established.
 - Native TCL settings still showed slow frames. This candidate does not fix proprietary panel rendering or claim a general system speedup.
-- Final repeated Home measurement was interrupted by an ADB disconnect. Further validation is required before calling this stable.
+- A later device-specific Guard memory exception survived reboot, with Home returning from YouTube and after suspend/resume. That TV policy change is separate from the APK and is not automatically applied by Casa. It does not establish faster native panel rendering or universal device compatibility.
+- Further performance validation is required before calling this stable.
 
 ## [0.2.0] — 2026-10-24
 

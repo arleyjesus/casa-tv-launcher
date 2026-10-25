@@ -21,7 +21,7 @@
 
 ## Estado del proyecto
 
-**Preparación local: v0.3.0, pendiente de validación final y publicación.** Ajusta el servicio de Inicio y añade una miniprueba de regresión; todavía no demuestra una mejora general del rendimiento ni resuelve los tirones de los paneles TCL.
+**Versión preliminar adicional: v0.3.0.** Ajusta el servicio de Inicio y añade una miniprueba de regresión; todavía no demuestra una mejora general del rendimiento ni resuelve los tirones de los paneles TCL. La v0.2.0 permanece como descarga de referencia.
 
 **Vista previa pública: v0.2.0.** Se desarrolló y probó en un **TCL 50C645 con Android 11 y firmware V8-R51MT05-LF1V652.021344**. El manifiesto permite Android 8.0/API 26 o posterior, pero otros modelos y versiones aún no están validados.
 
