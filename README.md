@@ -12,7 +12,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 ## Qué ofrece
 
-- Inicio sin anuncios propios, cuentas ni conexión a Internet desde Casa.
+- Inicio sin anuncios propios ni cuentas.
 - Diseños Clásico, Moderno e Inmersivo; hasta seis favoritas guardadas y ordenables con el mando.
 - Biblioteca completa al bajar desde una app, con tarjetas reutilizables.
 - Entradas HDMI y un acceso específico para jugar con la laptop.
@@ -26,7 +26,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 ## Estado del proyecto
 
-**Versión actual: v0.6.0.** Tres diseños seleccionables y ambiente con tres paisajes, tiempos, transiciones y zoom opcional. [Guía de diseños y ambiente](docs/DISENOS-AMBIENTE.es.md). Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
+**Versión actual: v0.7.0.** Tres diseños seleccionables, ambiente configurable y galería de GitHub con descarga manual. [Guía de la galería](docs/GALERIA.es.md). [Guía de diseños y ambiente](docs/DISENOS-AMBIENTE.es.md). Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
 
 [Laptop, HDMI y modo Juego](docs/JUGAR-C645.es.md)
 
@@ -59,7 +59,7 @@ Casa incluye tanto una vista previa manual como un servicio de salvapantallas An
 
 ## Privacidad y permisos
 
-La APK no solicita permiso de Internet ni acceso general al almacenamiento. Favoritas y preferencias permanecen en el dispositivo. El servicio opcional de Accesibilidad recibe únicamente cambios de ventana de los inicios de Google TV y Projectivy, sin capacidad de leer su contenido. [Detalle de privacidad](docs/PRIVACY.md).
+Desde 0.7 la APK solicita Internet para la descarga manual de fondos desde GitHub; Inicio y Ambiente no hacen peticiones. No solicita acceso general al almacenamiento. Favoritas y preferencias permanecen en el dispositivo. El servicio opcional de Accesibilidad recibe únicamente cambios de ventana de los inicios de Google TV y Projectivy, sin capacidad de leer su contenido. [Detalle de privacidad](docs/PRIVACY.md).
 
 ## Rendimiento, sin promesas infladas
 
@@ -73,6 +73,6 @@ Para informar de un fallo, abre un [issue](https://github.com/arleyjesus/casa-tv
 
 ## Licencia y créditos
 
-Código y recursos originales bajo [MIT](LICENSE): puedes usarlos, modificarlos y compartirlos conservando el aviso de licencia. El paisaje se creó con asistencia de IA. Los nombres e iconos de las aplicaciones pertenecen a sus titulares; Casa obtiene los iconos de las apps instaladas y no redistribuye sus APK. [Créditos](NOTICE.md).
+Código y recursos originales bajo [MIT](LICENSE): puedes usarlos, modificarlos y compartirlos conservando el aviso de licencia. Los paisajes se crearon con asistencia de IA. Los nombres e iconos de las aplicaciones pertenecen a sus titulares; Casa obtiene los iconos de las apps instaladas y no redistribuye sus APK. [Créditos](NOTICE.md).
 
 Proyecto independiente, sin afiliación con TCL, Google, Projectivy ni las plataformas de streaming.

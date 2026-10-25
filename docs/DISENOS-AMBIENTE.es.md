@@ -31,7 +31,7 @@ OK o Atrás cierra la vista previa. La selección y activación automática del 
 
 ## Contenido remoto: siguiente etapa
 
-La versión 0.6 sigue sin permiso de Internet. El pack publicado sirve para compartir los tres fondos; esta APK todavía no descarga ni importa packs.
+La versión 0.6 sigue sin permiso de Internet. Desde 0.7 existe descarga manual desde el catálogo de GitHub: consulta la [guía de galería](GALERIA.es.md). El ZIP publicado se mantiene para compartir; no se importan ZIP arbitrarios.
 
 Para una galería futura: catálogo JSON pequeño, enlaces HTTPS, tamaño y SHA-256 por archivo, descarga a petición, caché limitada y retorno a los fondos integrados sin red. El repositorio puede guardar catálogo y capturas; los packs versionados pueden adjuntarse a [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases). GitHub Pages sería una opción para servir el catálogo, sin necesidad de activarlo ahora. Evitar un sondeo permanente y no guardar vídeos en el historial Git.
 

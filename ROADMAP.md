@@ -28,7 +28,7 @@ These are planned priorities, not guarantees or a release schedule.
 
 - Improve app icon and TV banner assets.
 - Add release certificate fingerprints and a repeatable maintainer signing process.
-- Add an update-information path that preserves the current offline privacy contract, or make any network access an explicit future design decision.
+- Keep network use explicit and limited to requested wallpaper downloads; any APK update checker requires a separate decision.
 - Consider a standard Android Studio/Gradle project for easier community contributions.
 
 ## Later, if justified
@@ -45,7 +45,7 @@ Universal debloat, root, firmware flashing, removal of the original Google launc
 ## Design and ambient phases
 
 - Shipped in 0.6: three presets, three local landscapes and local timing/effect controls.
-- Next: opt-in GitHub catalog and bounded downloads, with offline fallback.
+- Shipped in 0.7: opt-in GitHub catalog and bounded manual downloads, with offline playback and built-in fallback.
 - Later: URL video after decoder, buffer and lifecycle testing; evaluate official YouTube playback separately.
 - Research: adaptive selection and TV-specific capabilities, without claiming access to TCL AIPQ.
 

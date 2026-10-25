@@ -24,6 +24,9 @@ jobs:
       - name: Test display option bounds
         shell: pwsh
         run: ./scripts/test-display-options.ps1
+      - name: Test gallery download limits
+        shell: pwsh
+        run: ./scripts/test-gallery.ps1
       - name: Build unsigned APK with installed Android SDK
         shell: pwsh
         run: ./scripts/build.ps1

@@ -78,3 +78,7 @@ Referencias de contexto, no benchmarks de nuestra TV: [TV Detox](https://github.
 ## 0.6.0 · 2026-10-25
 
 Tres presets seleccionados y revisados en el TV. Rotación de desierto, fiordo y bosque comprobada en la vista previa. CasaDream arrancó como salvapantallas real y quedó enlazado al gestor de sueños de Android; se salió con el mando. Se conservaron las seis favoritas y los tres ajustes anteriores tras actualizar. Pasaron las pruebas de Home, valores de diseño/ambiente y contrato de permisos. No se repitieron mediciones de RAM ni se demuestra una mejora de los paneles TCL. Las opciones de movimiento no cuentan aún con una prueba prolongada.
+
+## 0.7.0 · 2026-10-25
+
+Descarga manual desde el catálogo público de GitHub, activación y vista previa de los tres archivos comprobadas. Cancelar una actualización y volver a abrir conservó tres fondos completos. Borrar las descargas seleccionó los integrados y su vista previa funcionó. Se corrigió el recorte de texto de los botones observado en la primera prueba. Al terminar se dejó Moderno, 120 s, disolución y movimiento apagado; la galería remota quedó desactivada y sin archivos de prueba. Favoritas conservadas. No se hizo una desconexión de red ni una prueba prolongada de consumo.

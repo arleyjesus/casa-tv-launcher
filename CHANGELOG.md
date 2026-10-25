@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.7.0] — 2026-10-25
+
+- Added a manually downloaded GitHub ambient gallery, disabled by default.
+- Validates trusted HTTPS URLs, file sizes, SHA-256, PNG type and decoded dimensions before replacing a pack.
+- Keeps the previous complete pack on failed/cancelled downloads; stages at most one replacement.
+- Added downloaded/built-in selection and download removal. Ambient playback performs no network requests.
+- Added INTERNET permission for this feature, blocked cleartext traffic and updated privacy documentation.
+- Retained the three presets, integrated artwork, favorites and limited Home service.
+
+
 ## [0.6.0] — 2026-10-25
 
 - Selectable Classic, Modern and Immersive home layouts with preserved favorites.

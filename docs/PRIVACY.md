@@ -1,6 +1,10 @@
 # Privacy / Privacidad
 
-Casa v0.2.0 has no INTERNET permission, account system, analytics SDK, ad SDK or network updater.
+Versions through 0.6 have no INTERNET permission. Starting with 0.7, INTERNET is declared for the optional gallery. There is no account system, analytics SDK, ad SDK or network APK updater.
+
+Opening Home, Ambient or the gallery screen does not contact GitHub. Only pressing Download/Update starts HTTPS requests to raw.githubusercontent.com for the public arleyjesus/casa-tv-launcher catalog and images. GitHub receives the connecting IP and normal HTTP request metadata (including a Casa version User-Agent). Casa does not send favorites, installed-app lists, accessibility events or device identifiers. Requests stop on leaving the gallery; socket timeouts are 10 seconds and no periodic work is scheduled.
+
+Downloaded images and their catalog use app-private internal storage. The active pack is capped at three PNGs, 4 MiB each, with at most one replacement pack staged during update (24 MiB image data in total, plus small catalogs/filesystem overhead). A successful update removes the previous pack. Clear removes downloaded packs and selects built-in images. Gallery use is off by default. The remote-image preference is included in settings backups; image files are not. With a missing pack the built-in gallery is used.
 
 The app stores favorite package names, appearance options, previous focus and a short-lived Home-redirection exception on the TV. Local backups include favorites and appearance only. They are not uploaded by Casa. Android or the user's backup/file-transfer tools may handle files separately.
 

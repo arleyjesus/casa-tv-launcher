@@ -21,9 +21,10 @@ final class AmbientScene extends FrameLayout {
     private final ObjectAnimator[] motion=new ObjectAnimator[2];
     private final TextView clock;
     private ExecutorService decoder;
+    private java.io.File[] remote=new java.io.File[0];
     private boolean running;private int generation,index,front,minute;
     private final SimpleDateFormat format=new SimpleDateFormat("HH:mm\nEEEE, d 'de' MMMM",new Locale("es"));
-    private final Runnable advance=()->load((index+1)%AmbientGallery.FILES.length,false);
+    private final Runnable advance=()->load((index+1)%(remote.length>0?remote.length:AmbientGallery.FILES.length),false);
     private final Runnable tick=new Runnable(){public void run(){if(!running)return;clock.setText(format.format(new Date()));clock.setTranslationX((minute%3-1)*12);clock.setTranslationY((minute%2)*8);minute++;handler.postDelayed(this,60000-(System.currentTimeMillis()%60000));}};
 
     AmbientScene(Context context){
@@ -35,11 +36,11 @@ final class AmbientScene extends FrameLayout {
     }
     SharedPreferences prefs(){return Configuration.prefs(getContext());}
     int number(String key){int value=prefs().getInt(key,DisplayOptions.defaultInt(key));return DisplayOptions.valid(key,value)?value:DisplayOptions.defaultInt(key);}
-    void start(){if(running)return;running=true;decoder=Executors.newSingleThreadExecutor();int hour=Calendar.getInstance().get(Calendar.HOUR_OF_DAY);index=prefs().getBoolean("ambientByTime",false)?(hour<8?1:hour<18?0:2):0;load(index,true);tick.run();}
+    void start(){if(running)return;running=true;decoder=Executors.newSingleThreadExecutor();remote=prefs().getBoolean("ambientRemote",false)?new RemoteGallery(getContext()).local():new java.io.File[0];int hour=Calendar.getInstance().get(Calendar.HOUR_OF_DAY);index=prefs().getBoolean("ambientByTime",false)?(hour<8?1:hour<18?0:2):0;index=index%(remote.length>0?remote.length:AmbientGallery.FILES.length);load(index,true);tick.run();}
     void stop(){running=false;generation++;handler.removeCallbacksAndMessages(null);if(decoder!=null){decoder.shutdownNow();decoder=null;}for(int i=0;i<2;i++){images[i].animate().cancel();if(motion[i]!=null)motion[i].cancel();images[i].setImageDrawable(null);images[i].setScaleX(1);images[i].setScaleY(1);}}
     private void load(int next,boolean first){
-        if(!running||decoder==null)return;final int request=++generation;
-        decoder.execute(()->{android.graphics.Bitmap bitmap=AmbientGallery.decode(getContext(),next);handler.post(()->{if(!running||request!=generation)return;display(bitmap,next,first,request);});});
+        if(!running||decoder==null)return;final int request=++generation;final java.io.File[] selected=remote;
+        decoder.execute(()->{android.graphics.Bitmap bitmap=selected.length>0?AmbientGallery.decodeFile(getContext(),selected[next],next):AmbientGallery.decode(getContext(),next);handler.post(()->{if(!running||request!=generation)return;display(bitmap,next,first,request);});});
     }
     private void display(Bitmap bitmap,int next,boolean first,int request){
         int incoming=first?0:1-front,old=1-incoming;ImageView view=images[incoming];view.animate().cancel();if(motion[incoming]!=null)motion[incoming].cancel();view.setScaleX(1);view.setScaleY(1);view.setImageBitmap(bitmap);view.bringToFront();
