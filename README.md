@@ -1,6 +1,10 @@
-# Casa TV Launcher
+# Casa Aura TV
 
 **Un inicio tranquilo para tu televisor.** Launcher independiente para Android TV y Google TV, con favoritas, accesos HDMI y salvapantallas ambiente.
+
+Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**. El proyecto y sus versiones iniciales se llamaban Casa TV Launcher; se conserva el repositorio y el paquete para mantener actualizaciones y configuración.
+
+[Resultados reales en C645](docs/RESULTADOS-C645.es.md) · [Inicio estable con TCL Guard](docs/TCL-C645-GUARD.es.md)
 
 [Descargar APK y versiones](https://github.com/arleyjesus/casa-tv-launcher/releases) · [Instalación](docs/INSTALL.es.md) · [Compatibilidad](docs/COMPATIBILITY.md) · [English](README.en.md)
 
@@ -21,7 +25,9 @@
 
 ## Estado del proyecto
 
-**Versión preliminar adicional: v0.3.0.** Ajusta el servicio de Inicio y añade una miniprueba de regresión; todavía no demuestra una mejora general del rendimiento ni resuelve los tirones de los paneles TCL. La v0.2.0 permanece como descarga de referencia.
+**Rediseño preliminar: v0.4.0 · Casa Aura TV.** Centro de control por tarjetas, paneles centrados y nombre propio, manteniendo el paisaje y la identidad de Casa. La v0.3 ajusta el servicio de Inicio. Ninguna demuestra una aceleración general ni resuelve los tirones de los paneles TCL. La v0.2.0 permanece como descarga de referencia.
+
+![Centro de control de Casa Aura TV](docs/images/aura-control.png)
 
 **Vista previa pública: v0.2.0.** Se desarrolló y probó en un **TCL 50C645 con Android 11 y firmware V8-R51MT05-LF1V652.021344**. El manifiesto permite Android 8.0/API 26 o posterior, pero otros modelos y versiones aún no están validados.
 

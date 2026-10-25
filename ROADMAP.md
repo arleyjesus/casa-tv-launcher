@@ -2,7 +2,7 @@
 
 These are planned priorities, not guarantees or a release schedule.
 
-## v0.3 — local stability candidate
+## Native stability — still under investigation
 
 - Validate Home return under repeatable cold/warm and suspend/resume conditions.
 - Keep the narrow Home event filter and test duplicate handling without suppressing subsequent Home actions.
@@ -10,6 +10,10 @@ These are planned priorities, not guarantees or a release schedule.
 - Native panel stutter remains unresolved. Avoid blanket debloat, cache clearing and compilation of already precompiled vendor packages.
 
 ## Following versions — portability and accessibility
+
+- Keep a versioned C645 results journal and distinguish measurements of Casa from Android/TCL panels.
+- Extend Casa Aura's card-based control center while retaining the existing visual identity and low rendering cost.
+- Validate the 0.4 redesign over longer sessions before promoting it from pre-release.
 
 - Extract device-specific behavior into adapters instead of assuming TCL packages and three HDMI ports.
 - Detect available inputs; support custom names and gracefully handle devices without a tuner.

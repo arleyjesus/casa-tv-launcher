@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0] — pre-release, 2026-10-25
+
+- Renamed the visible application to Casa Aura TV; retained package, certificate and preferences.
+- Replaced the long settings menu with a nine-card control center, explicit D-pad focus links and original vector-style icons drawn natively.
+- Centered secondary dialogs and sized them to content, with a capped scroll area.
+- Grouped connections and Home recovery; only show the optional Projectivy shortcut when installed.
+- Preserved Casa's wallpaper and warm palette; no live blur, network permission, additional artwork or background service.
+- Published the C645/Guard procedure, read-only inspector and device results journal, including measurement limits and unresolved native panel stutter.
+
 ## [0.3.0] — pre-release, 2026-10-25
 
 - Home accessibility event timeout reduced from 200 ms to zero.

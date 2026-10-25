@@ -1,5 +1,9 @@
 # Instalación, actualización y recuperación
 
+Desde 0.4 el nombre visible es **Casa Aura TV**. El paquete `tv.casa.launcher`, la firma y las preferencias se conservan. Las etiquetas de servicio antiguas «Casa · Botón Inicio» / «Casa · Ambiente» pasan a «Casa Aura · Botón Inicio» / «Casa Aura · Ambiente».
+
+Para el dispositivo de referencia, consulta además [protección de memoria de TCL Guard](TCL-C645-GUARD.es.md) y [resultados publicados de la C645](RESULTADOS-C645.es.md). Son ajustes y pruebas del TV, no cambios que el APK aplique al instalarse.
+
 ## Antes de instalar
 
 v0.2.0 es una versión preliminar. El equipo comprobado es TCL 50C645, Android 11, V8-R51MT05-LF1V652.021344. No instales firmware de otro modelo para usar Casa. Guarda una vía para abrir los ajustes originales y conserva habilitados Google TV y los servicios TCL.
@@ -44,6 +48,8 @@ Solo si reconoce esa operación y has decidido permitir el autoarranque de Casa:
 ```
 
 Si responde Unknown operation, detente: no es un comando universal de Android. No desactives TCL Guard ni pruebes nombres/índices de operaciones al azar. Para revertir, restaura el valor que anotaste; en el dispositivo probado era `ignore`.
+
+**Autoarranque no garantiza permanencia en memoria.** En la C645 se observó un cierre de Casa por Guard incluso con esa operación permitida. Se comprobó por separado una excepción individual en sus listas persistente y activa: [método, respaldo, límites y recuperación](TCL-C645-GUARD.es.md).
 
 ## Ambiente: opcional
 

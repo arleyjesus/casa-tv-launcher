@@ -8,7 +8,7 @@
 | Android | 11 / API 30 |
 | Firmware | V8-R51MT05-LF1V652.021344 |
 | Platform reported by TV | G03_4K_GB / BeyondTV4 / Smart TV Pro |
-| Casa | v0.2.0, versionCode 2 |
+| Casa | 0.2 reference preview, 0.3 and Casa Aura TV 0.4 pre-releases |
 
 The manifest minSdk is 26. This is an installation floor, not proof of compatibility with every Android 8+ TV. No Fire TV, other manufacturer, other C645 size, alternate region or newer Android build has been validated by the maintainer yet.
 
@@ -24,6 +24,8 @@ The manifest minSdk is 26. This is an installation floor, not proof of compatibi
 - CasaDream connected as a system screensaver. Automatic inactivity entry was tested with a temporary 30-second timeout, then the original timeout was restored.
 
 ## Known limits
+
+Device-specific Guard persistence and the later panel/memory observations are recorded in the [C645 results journal](RESULTADOS-C645.es.md) and [Guard guide](TCL-C645-GUARD.es.md). Neither policy changes nor removal of apps are performed by Casa itself.
 
 - Three fixed HDMI buttons; no automatic input enumeration UI or custom input names yet.
 - Picture/sound controls open original TCL settings. Casa does not reskin their firmware panels.
