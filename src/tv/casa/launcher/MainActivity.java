@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
     int px(float v){return Math.round(v*scale);}
     @Override public void onCreate(Bundle b){super.onCreate(b);lastFocus=getPreferences(0).getString("lastFocus","");immersive();render();IntentFilter f=new IntentFilter();f.addAction(Intent.ACTION_PACKAGE_ADDED);f.addAction(Intent.ACTION_PACKAGE_REMOVED);f.addAction(Intent.ACTION_PACKAGE_CHANGED);f.addDataScheme("package");registerReceiver(packageChanges,f);}
     @Override public void onNewIntent(Intent i){super.onNewIntent(i);setIntent(i);closePanel();immersive();restoreFocus();}
+    @Override public void onWindowFocusChanged(boolean focused){super.onWindowFocusChanged(focused);if(focused)HomeTiming.focused();}
     void immersive(){getWindow().getDecorView().setSystemUiVisibility(5894);}
     @Override public void onResume(){super.onResume();resumed=true;immersive();applyAppearance();ticker.run();}
     @Override public void onPause(){resumed=false;getPreferences(0).edit().putString("lastFocus",lastFocus).apply();handler.removeCallbacks(ticker);super.onPause();}
@@ -90,7 +91,7 @@ public class MainActivity extends Activity {
       entry(b,"Estado de Inicio",()->showHomeStatus());
       entry(b,"Abrir Google TV · temporal",()->{getSharedPreferences("navigation",0).edit().putLong("bypassUntil",System.currentTimeMillis()+60000).apply();d.dismiss();safeStart(new Intent().setComponent(new ComponentName("com.google.android.apps.tv.launcherx","com.google.android.apps.tv.launcherx.home.HomeActivity")));});
       entry(b,"Abrir Projectivy · temporal",()->{getSharedPreferences("navigation",0).edit().putLong("bypassUntil",System.currentTimeMillis()+60000).apply();d.dismiss();launch("com.spocky.projengmenu");});
-      entry(b,"Acerca de Casa",()->new AlertDialog.Builder(this).setTitle("Casa · 0.2.0").setMessage("Inicio y ambiente personalizados. Sin anuncios ni permiso de Internet. El servicio de Inicio solo detecta las ventanas de inicio de Google TV y Projectivy; no lee su contenido. Mantiene los ajustes originales de TCL.\n\nMantén OK sobre una favorita para editarla.").setPositiveButton("Cerrar",null).show());
+      entry(b,"Acerca de Casa",()->new AlertDialog.Builder(this).setTitle("Casa · 0.3.0").setMessage("Inicio y ambiente personalizados. Sin anuncios ni permiso de Internet. El servicio de Inicio solo detecta las ventanas de inicio de Google TV y Projectivy; no lee su contenido. Mantiene los ajustes originales de TCL.\n\nMantén OK sobre una favorita para editarla.").setPositiveButton("Cerrar",null).show());
       b.getChildAt(0).requestFocus();
     }
     void showApps(boolean edit){Dialog d=panel(edit?"Tus favoritas · hasta 6":"Aplicaciones");LinearLayout b=body(d);if(appCache!=null){populateApps(d,b,new ArrayList<>(appCache),edit);return;}b.addView(text("Cargando aplicaciones…",14,MUTED));loader.execute(()->{ArrayList<String> found=apps();handler.post(()->{if(!alive)return;appCache=found;if(activeDialog==d&&d.isShowing()){b.removeAllViews();populateApps(d,b,found,edit);}});});}

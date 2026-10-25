@@ -2,7 +2,14 @@
 
 These are planned priorities, not guarantees or a release schedule.
 
-## v0.3 — portability and accessibility
+## v0.3 — local stability candidate
+
+- Validate Home return under repeatable cold/warm and suspend/resume conditions.
+- Keep the narrow Home event filter and test duplicate handling without suppressing subsequent Home actions.
+- Separate launcher timing from native TCL settings/panel rendering; do not claim system improvements from shorter animations.
+- Native panel stutter remains unresolved. Avoid blanket debloat, cache clearing and compilation of already precompiled vendor packages.
+
+## Following versions — portability and accessibility
 
 - Extract device-specific behavior into adapters instead of assuming TCL packages and three HDMI ports.
 - Detect available inputs; support custom names and gracefully handle devices without a tuner.

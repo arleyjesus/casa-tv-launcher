@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] — local candidate, not published
+
+- Home accessibility event timeout reduced from 200 ms to zero.
+- Duplicate-event suppression reduced from 1,200 ms to 150 ms, with a regression test for a subsequent Home action.
+- Redirect requests avoid adding an activity transition animation.
+- Added local timing logs for event delivery and focus acquisition; no screen contents are logged.
+- No additional permissions, package disabling or native TV settings changes.
+- On-device installation and service binding passed. A first measured redirect took 804 ms after event receipt; a faster end-to-end Home return has **not** been established.
+- Native TCL settings still showed slow frames. This candidate does not fix proprietary panel rendering or claim a general system speedup.
+- Final repeated Home measurement was interrupted by an ADB disconnect. Further validation is required before calling this stable.
+
 ## [0.2.0] — 2026-10-24
 
 First public preview.

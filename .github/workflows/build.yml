@@ -18,6 +18,9 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+      - name: Test Home redirect policy
+        shell: pwsh
+        run: ./scripts/test-home.ps1
       - name: Build unsigned APK with installed Android SDK
         shell: pwsh
         run: ./scripts/build.ps1
