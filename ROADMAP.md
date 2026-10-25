@@ -1,0 +1,30 @@
+# Roadmap
+
+These are planned priorities, not guarantees or a release schedule.
+
+## v0.3 — portability and accessibility
+
+- Extract device-specific behavior into adapters instead of assuming TCL packages and three HDMI ports.
+- Detect available inputs; support custom names and gracefully handle devices without a tuner.
+- Move strings into Android resources and add complete English/Spanish UI support.
+- Test focus navigation, text scaling, TalkBack and all dialog/Home interactions.
+- Add automated tests for backup validation, migration, favorites and package changes.
+- Validate on additional Android/Google TV models with a documented test checklist.
+
+## Distribution and maintenance
+
+- Improve app icon and TV banner assets.
+- Add release certificate fingerprints and a repeatable maintainer signing process.
+- Add an update-information path that preserves the current offline privacy contract, or make any network access an explicit future design decision.
+- Consider a standard Android Studio/Gradle project for easier community contributions.
+
+## Later, if justified
+
+- User-selected wallpapers and configurable card density.
+- More robust screensaver configuration and user-controlled timing.
+- Safer recovery UI for unavailable apps and disabled Home redirection.
+- Longer performance tests: cold/warm launch, frame pacing, memory and suspend/resume.
+
+## Outside the launcher
+
+Universal debloat, root, firmware flashing, removal of the original Google launcher and replacement of proprietary picture/game processing are not project features. Device-specific tuning belongs in separately reviewed documentation and must remain reversible.

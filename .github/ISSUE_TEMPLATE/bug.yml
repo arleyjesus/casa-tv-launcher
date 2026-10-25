@@ -1,0 +1,28 @@
+name: Error / Bug report
+description: Reporta un fallo reproducible sin datos privados.
+title: "[Bug] "
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Marca y modelo / Device model
+      placeholder: TCL 50C645
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Android, firmware y versión de Casa
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos, resultado esperado y resultado observado
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia redactada / Redacted evidence
+      description: No incluyas IP, cuentas, claves, credenciales ni volcados completos del TV.

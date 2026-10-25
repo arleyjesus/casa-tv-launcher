@@ -1,0 +1,14 @@
+name: Propuesta / Feature request
+description: Propón una mejora concreta y su utilidad.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema y comportamiento propuesto
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Dispositivo, navegación y alternativas

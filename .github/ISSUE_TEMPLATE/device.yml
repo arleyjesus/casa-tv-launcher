@@ -1,0 +1,23 @@
+name: Compatibilidad / Device report
+description: Ayuda a documentar un modelo adicional sin afirmar compatibilidad universal.
+title: "[Device] "
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Modelo, país de venta, Android y firmware
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versión de Casa
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Resultados
+      description: Indica instalación, mando, Home, reinicio, suspensión, HDMI, ajustes y ambiente. Distingue probado de no probado.
+    validations:
+      required: true

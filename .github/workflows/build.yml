@@ -1,0 +1,28 @@
+name: Build and APK checks
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Build unsigned APK with installed Android SDK
+        shell: pwsh
+        run: ./scripts/build.ps1
+      - name: Check APK privacy and manifest contract
+        shell: pwsh
+        run: |
+          $apk = Get-ChildItem build/*-unsigned.apk | Select-Object -First 1
+          ./scripts/verify-apk.ps1 -ApkPath $apk.FullName
