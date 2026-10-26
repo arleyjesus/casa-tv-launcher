@@ -6,7 +6,7 @@ Developed and tested specifically on **TCL 50C645 / Android 11 / V652**. Previou
 
 **0.4 pre-release:** a native card-based control center and compact centered dialogs, preserving Casa's existing artwork. Native TCL panels are unchanged; no TV-wide speedup is claimed.
 
-**Current release: 0.9.0.** Dark visual refresh, quality settings and an on-demand game hub/browser. Added a verified TCL adaptive-content control with Android Slice consent, fresh state reads and undo. [Picture guide (Spanish)](docs/IMAGEN-TCL.es.md). Choose Classic, Modern or Immersive under Appearance. Ambient mode includes three landscapes, rotation, cut/fade and optional zoom. Favorites and legacy backups are retained. Version 0.7 adds an optional, manually downloaded GitHub gallery with bounded local storage. [Gallery guide (Spanish)](docs/GALERIA.es.md). [Design and ambient guide (Spanish)](docs/DISENOS-AMBIENTE.es.md).
+**Current release: 0.10.0.** Online ambient collections, cached images, favorites, local image filters and optional bounded MP4 streaming. Dark visual refresh, quality settings and an on-demand game hub/browser. Added a verified TCL adaptive-content control with Android Slice consent, fresh state reads and undo. [Picture guide (Spanish)](docs/IMAGEN-TCL.es.md). Choose Classic, Modern or Immersive under Appearance. Ambient mode includes three landscapes, rotation, cut/fade and optional zoom. Favorites and legacy backups are retained. Version 0.7 adds an optional, manually downloaded GitHub gallery with bounded local storage. [Gallery guide (Spanish)](docs/GALERIA.es.md). [Design and ambient guide (Spanish)](docs/DISENOS-AMBIENTE.es.md).
 
 [Download APK / releases](https://github.com/arleyjesus/casa-tv-launcher/releases) · [Español](README.md) · [Compatibility](docs/COMPATIBILITY.md)
 
@@ -14,7 +14,7 @@ Developed and tested specifically on **TCL 50C645 / Android 11 / V652**. Previou
 
 ## Features
 
-- An ad-free home interface without Casa accounts. INTERNET is used for manually requested GitHub wallpaper downloads and user-opened game pages.
+- An ad-free home interface without Casa accounts. INTERNET is used for manually requested wallpaper downloads, optional ambient MP4 streaming and user-opened game pages.
 - Up to six editable, reorderable favorites and an installed-app list.
 - HDMI shortcuts and a panel linking to the TV's original settings.
 - Static cinematic wallpaper, clock and optional focus animation.
@@ -44,3 +44,5 @@ MIT licensed. Original artwork was created with AI assistance. Third-party names
 ## Version 0.9
 
 Cool dark surfaces and four visual-effect levels; a game hub with HDMI aliases/status, native accessory settings, installed games and an on-demand web browser. The browser closes on exit; third-party games may need a controller or keyboard. Android 11 controller battery reporting is unavailable. No automatic AIPQ or picture-profile changes. [Spanish guide and limitations](docs/CENTRO-JUEGOS.es.md).
+
+[Visual release history](docs/HISTORIAL-VISUAL.es.md) · [Online ambient guide, sources and limits](docs/AMBIENTE-ONLINE.es.md). Custom network sources and streaming settings are local; automatic video starts disabled.

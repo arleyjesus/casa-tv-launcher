@@ -33,6 +33,9 @@ jobs:
       - name: Test game browser URL policy
         shell: pwsh
         run: ./scripts/test-games.ps1
+      - name: Test online ambient limits
+        shell: pwsh
+        run: ./scripts/test-online.ps1
       - name: Build unsigned APK with installed Android SDK
         shell: pwsh
         run: ./scripts/build.ps1

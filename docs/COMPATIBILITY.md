@@ -55,3 +55,7 @@ When reporting another device, distinguish observed success from untested featur
 C645/V652 HDMI entries are identified by the labels supplied by TvInputManager; their state is reported as-is. ARC/eARC is HDMI 3 on the reference unit. Physical PC/video handshake remains untested. Accessory settings use the TCL Android-TV action verified on this firmware. Controller detection is based on input axes/buttons and may need model-specific refinements; no physical gamepad has been validated. Battery reporting needs Android 12/API 31 and device support, so Android 11 shows unavailable.
 
 The integrated browser requires the system WebView component and Internet. Third-party games are not all remote-compatible and are not certified by Casa. It closes on exit; game sessions are not preserved. This does not replace TCL Game Master or alter image processing.
+
+## 0.10 ambient online
+
+Validated on the reference C645: six image downloads and reuse without re-downloading, a 4K source displayed at the Android UI resolution, native MP4 playback and player release on exit. The user confirmed moving Full HD video on the physical screen; accelerated video can be absent from ADB screenshots on this unit. ACCESS_NETWORK_STATE is added only to enforce the optional Wi-Fi restriction. Image filters affect ambient photos only. See [online ambient details](AMBIENTE-ONLINE.es.md) and the results journal for source-specific limits.

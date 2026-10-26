@@ -4,7 +4,7 @@
 
 Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**. El proyecto y sus versiones iniciales se llamaban Casa TV Launcher; se conserva el repositorio y el paquete para mantener actualizaciones y configuración.
 
-[Resultados reales en C645](docs/RESULTADOS-C645.es.md) · [Inicio estable con TCL Guard](docs/TCL-C645-GUARD.es.md)
+[Resultados reales en C645](docs/RESULTADOS-C645.es.md) · [Inicio estable con TCL Guard](docs/TCL-C645-GUARD.es.md) · [Historial visual](docs/HISTORIAL-VISUAL.es.md)
 
 [Descargar APK y versiones](https://github.com/arleyjesus/casa-tv-launcher/releases) · [Instalación](docs/INSTALL.es.md) · [Compatibilidad](docs/COMPATIBILITY.md) · [English](README.en.md)
 
@@ -17,7 +17,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 - Biblioteca completa al bajar desde una app, con tarjetas reutilizables.
 - Centro de Juegos: HDMI con nombres y estado, mandos, GeForce NOW y juegos web.
 - Control de Contenido adaptable de TCL con permiso opcional, y acceso a sus ajustes originales.
-- Paisaje estático, reloj y selección discreta; sin vídeo de fondo.
+- Ambiente con paisajes integrados, colecciones online, favoritos y vídeo MP4 opcional.
 - Efectos Desactivados/Bajos/Medios/Altos, título/reloj y animación de selección configurables.
 - Copias locales y restauración de favoritas y apariencia.
 - Salvapantallas ambiente independiente, sin PIN.
@@ -26,7 +26,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 ## Estado del proyecto
 
-**Versión actual: v0.9.0.** Nuevo acabado negro/azul, efectos regulables y [Centro de Juegos](docs/CENTRO-JUEGOS.es.md) con entradas, accesorios y navegador a petición. Panel de Contenido adaptable de TCL con lectura, cambio y deshacer. [Guía de imagen](docs/IMAGEN-TCL.es.md). Conserva los tres diseños, el ambiente y la galería de GitHub. [Guía de la galería](docs/GALERIA.es.md). [Guía de diseños y ambiente](docs/DISENOS-AMBIENTE.es.md). Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
+**Versión actual: v0.10.0.** [Ambiente online](docs/AMBIENTE-ONLINE.es.md): colecciones, favoritas, imágenes descargadas y vídeo MP4 a petición. Nuevo acabado negro/azul, efectos regulables y [Centro de Juegos](docs/CENTRO-JUEGOS.es.md) con entradas, accesorios y navegador a petición. Panel de Contenido adaptable de TCL con lectura, cambio y deshacer. [Guía de imagen](docs/IMAGEN-TCL.es.md). Conserva los tres diseños, el ambiente y la galería de GitHub. [Guía de la galería](docs/GALERIA.es.md). [Guía de diseños y ambiente](docs/DISENOS-AMBIENTE.es.md). Probada en la C645 de referencia; los paneles nativos de TCL siguen pendientes de mejoras y no se anuncia una aceleración general del sistema.
 
 [Laptop, HDMI y modo Juego](docs/JUGAR-C645.es.md)
 
@@ -51,21 +51,23 @@ Mantén **OK** sobre una favorita para editarla. En **Ajustes** encontrarás ord
 
 ## Ambiente
 
-![Salvapantallas real de Casa 0.9](docs/images/aura-ambient-09.png)
+![Colecciones de Ambiente 0.10](docs/images/ambient-online-010.png)
+
+[Ambiente online: uso, fuentes y límites](docs/AMBIENTE-ONLINE.es.md)
 
 Casa incluye tanto una vista previa manual como un servicio de salvapantallas Android. Su selección y activación dependen del firmware. No es una pantalla de bloqueo: al suspenderse realmente el TV, la pantalla se apaga.
 
 ## Privacidad y permisos
 
-Desde 0.7 la APK solicita Internet para fondos; desde 0.9 también se usa al abrir juegos web. Inicio y Ambiente no hacen peticiones. Los sitios visitados reciben tu IP y datos habituales del navegador. No solicita acceso general al almacenamiento. Favoritas y preferencias permanecen en el dispositivo. El servicio opcional de Accesibilidad recibe únicamente cambios de ventana de los inicios de Google TV y Projectivy, sin capacidad de leer su contenido. [Detalle de privacidad](docs/PRIVACY.md).
+Desde 0.7 la APK solicita Internet para fondos; desde 0.9 también se usa al abrir juegos web. Inicio no hace peticiones. Ambiente usa imágenes locales; el vídeo se conecta solo al probarlo o activar esa opción. Los sitios visitados reciben tu IP y datos habituales del navegador. El permiso de estado de red permite respetar Solo Wi-Fi; no solicita acceso general al almacenamiento. Favoritas y preferencias permanecen en el dispositivo. El servicio opcional de Accesibilidad recibe únicamente cambios de ventana de los inicios de Google TV y Projectivy, sin capacidad de leer su contenido. [Detalle de privacidad](docs/PRIVACY.md).
 
-## Rendimiento, sin promesas infladas
+## Rendimiento
 
 Casa usa vistas Android nativas y recursos locales. La muestra de navegación estabilizada de v0.2.0 registró 0 fotogramas lentos de 171 y mediana de 5 ms en el TV probado. La versión anterior también navegaba bien: **esto no demuestra una aceleración general del televisor**. [Método y resultados](docs/COMPATIBILITY.md#rendimiento).
 
 ## Compilar y contribuir
 
-El proyecto usa Java y herramientas oficiales del SDK, sin dependencias externas de aplicación ni Gradle en esta versión. [Compilación y firma](docs/BUILD.md) · [Contribuir](CONTRIBUTING.md) · [Hoja de ruta](ROADMAP.md) · [Historial](CHANGELOG.md).
+El proyecto usa Java y herramientas oficiales del SDK, sin dependencias externas de aplicación ni Gradle en esta versión. [Compilación y firma](docs/BUILD.md) · [Contribuir](CONTRIBUTING.md) · [Hoja de ruta](ROADMAP.md) · [Historial](CHANGELOG.md) · [Evolución visual](docs/HISTORIAL-VISUAL.es.md).
 
 Para informar de un fallo, abre un [issue](https://github.com/arleyjesus/casa-tv-launcher/issues) con modelo, Android, firmware y pasos de reproducción. No publiques cuentas, IP, credenciales, claves ni volcados completos del TV.
 

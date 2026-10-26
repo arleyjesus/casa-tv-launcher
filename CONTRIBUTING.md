@@ -12,3 +12,7 @@ Bug reports, translations, device testing and small focused pull requests are we
 Use the issue forms for device reports. Redact screenshots and logs. For suspected vulnerabilities, follow [SECURITY.md](SECURITY.md) rather than publishing sensitive details.
 
 Contributions are provided under the project's MIT license. Third-party assets require a compatible license and attribution.
+
+## Capturas por versión
+
+Al preparar una release, guarda las capturas nuevas en docs/images con la versión en su nombre. No sobrescribas ni borres las anteriores. Añade la versión y sus imágenes a docs/history/releases.json y ejecuta scripts/update-visual-history.ps1. El historial enlaza las imágenes de la etiqueta correspondiente; el README muestra la versión actual. Incluye el enlace al historial en las notas de la release.

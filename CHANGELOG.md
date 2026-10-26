@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.10.0 · 2026-10-25
+
+- Ambiente organizado en Colecciones, Aspecto, Vídeo y Catálogo.
+- Catálogo JSON de contenido, selección de colecciones/favoritos, caché con límite y descarga de archivos ausentes.
+- Fuentes Full HD/4K con decodificación adaptada a la vista y precarga de la siguiente imagen.
+- Filtros locales de brillo, contraste y saturación; transiciones de desplazamiento y zoom.
+- Streaming MP4 silenciado, con límites por sesión, Solo Wi-Fi y cierre al salir.
+- Historial visual por versión y redacción simplificada del README.
+
 ## 0.9.0 · 2026-10-25
 
 - Paleta negra/azul, paneles coherentes y degradado inferior en Inicio y Ambiente.

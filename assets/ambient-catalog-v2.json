@@ -1,0 +1,190 @@
+{
+  "schema": 2,
+  "collections": [
+    {
+      "id": "cinema",
+      "name": "Paisajes cinematográficos",
+      "items": [
+        {
+          "id": "desert",
+          "title": "Desierto",
+          "type": "image",
+          "author": "Casa Aura TV",
+          "license": "MIT · imagen creada con IA",
+          "source": "https://github.com/arleyjesus/casa-tv-launcher/blob/v0.6.0/NOTICE.md",
+          "variants": [
+            {
+              "url": "https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/v0.6.0/assets/landscape.png",
+              "bytes": 1909521,
+              "sha256": "d9c6365a5f0552ccf41f8d73cf1fb19405dfd345bda7d69fdbd91e576f7c6039",
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mountains",
+      "name": "Montañas",
+      "items": [
+        {
+          "id": "fjord",
+          "title": "Fiordo",
+          "type": "image",
+          "author": "Casa Aura TV",
+          "license": "MIT · imagen creada con IA",
+          "source": "https://github.com/arleyjesus/casa-tv-launcher/blob/v0.6.0/NOTICE.md",
+          "variants": [
+            {
+              "url": "https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/v0.6.0/assets/ambient-fjord.png",
+              "bytes": 2107887,
+              "sha256": "6a376e18bd0e7e75f2606de1810ef9629b3bcc42b18bc09229bb75e2413fcdf1",
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "forests",
+      "name": "Bosques",
+      "items": [
+        {
+          "id": "forest",
+          "title": "Bosque",
+          "type": "image",
+          "author": "Casa Aura TV",
+          "license": "MIT · imagen creada con IA",
+          "source": "https://github.com/arleyjesus/casa-tv-launcher/blob/v0.6.0/NOTICE.md",
+          "variants": [
+            {
+              "url": "https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/v0.6.0/assets/ambient-forest.png",
+              "bytes": 2236582,
+              "sha256": "7c76d81f0abceaa0fb477e7250e3b0063df82eb16d03f13d069a9d5ee554cafe",
+              "width": 1672,
+              "height": 940
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "name": "Naturaleza",
+      "items": [
+        {
+          "id": "mountain-4k",
+          "title": "Valle entre montañas",
+          "type": "image",
+          "author": "digantparmar · WordPress Photo Directory",
+          "license": "CC0 1.0",
+          "source": "https://wordpress.org/photos/photo/40669d7369/",
+          "variants": [
+            {
+              "url": "https://pd.w.org/2026/04/40669d7369e4c6ea4.29312783.jpg",
+              "bytes": 3493946,
+              "sha256": "08c7bb7174605b21093c745f1bd4da95723bfc8bc4b1f9a69a8dc80d632e9627",
+              "width": 3840,
+              "height": 2160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oceans",
+      "name": "Océanos",
+      "items": [
+        {
+          "id": "ocean",
+          "title": "Atardecer en el Atlántico",
+          "type": "image",
+          "author": "Kaitlin Kovacs / USGS",
+          "license": "Dominio público",
+          "source": "https://www.usgs.gov/media/images/sunset-over-atlantic-ocean",
+          "variants": [
+            {
+              "url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/20180826_193500.jpg",
+              "bytes": 4346190,
+              "sha256": "f1de495fdb2b0afa7173176fb31831326b16bef1d5e0f0be0173a58f6848654b",
+              "width": 4032,
+              "height": 3024
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "name": "Espacio",
+      "items": [
+        {
+          "id": "earth",
+          "title": "La Tierra · hemisferio oriental",
+          "type": "image",
+          "author": "NASA / MODIS / Terra",
+          "license": "Dominio público (EE. UU.)",
+          "source": "https://commons.wikimedia.org/wiki/File:Earth_Eastern_Hemisphere.jpg",
+          "variants": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Earth_Eastern_Hemisphere.jpg",
+              "bytes": 536295,
+              "sha256": "3b47b77b49ccd18ecf0aa58610a2047cc68a2e06a1de2e224295a1346aa2dc95",
+              "width": 2048,
+              "height": 2048
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ocean-video",
+      "name": "Océanos en movimiento",
+      "items": [
+        {
+          "id": "perpetual-ocean",
+          "title": "Océanos en movimiento · NASA (360p)",
+          "type": "mp4",
+          "author": "NASA/Goddard Space Flight Center Scientific Visualization Studio",
+          "license": "NASA Media Usage Guidelines",
+          "source": "https://svs.gsfc.nasa.gov/3827/",
+          "variants": [
+            {
+              "url": "https://svs.gsfc.nasa.gov/vis/a000000/a003800/a003827/s2011_09_all.m4v",
+              "width": 640,
+              "height": 360
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "demo-video",
+      "name": "Pruebas de reproducción",
+      "items": [
+        {
+          "id": "bunny-demo",
+          "type": "mp4",
+          "title": "Prueba Full HD · Big Buck Bunny",
+          "author": "© 2008 Blender Foundation · www.bigbuckbunny.org",
+          "license": "CC BY 3.0 · fragmento codificado por Test Videos",
+          "source": "https://peach.blender.org/about/",
+          "variants": [
+            {
+              "url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4",
+              "width": 1280,
+              "height": 720
+            },
+            {
+              "url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

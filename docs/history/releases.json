@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "releases": [
+    {
+      "version": "0.10.0",
+      "title": "Ambiente online y colecciones",
+      "images": [
+        {
+          "file": "docs/images/ambient-online-010.png",
+          "caption": "Colecciones online y caché local"
+        },
+        {
+          "file": "docs/images/ambient-aspect-010.png",
+          "caption": "Ajustes de aspecto del ambiente"
+        },
+        {
+          "file": "docs/images/ambient-photo-010.png",
+          "caption": "Fuente 4K de WordPress Photo Directory en la C645"
+        }
+      ]
+    },
+    {
+      "version": "0.9.0",
+      "title": "Centro de Juegos y acabado oscuro",
+      "images": [
+        {
+          "file": "docs/images/aura-home-09.png",
+          "caption": "Inicio moderno"
+        },
+        {
+          "file": "docs/images/aura-games-09.png",
+          "caption": "Centro de Juegos"
+        },
+        {
+          "file": "docs/images/aura-control-09.png",
+          "caption": "Centro de control"
+        },
+        {
+          "file": "docs/images/aura-ambient-09.png",
+          "caption": "Ambiente"
+        }
+      ]
+    },
+    {
+      "version": "0.8.0",
+      "title": "Controles de imagen TCL",
+      "images": [
+        {
+          "file": "docs/images/picture-08.png",
+          "caption": "Controles de imagen TCL"
+        }
+      ]
+    },
+    {
+      "version": "0.7.0",
+      "title": "Galería descargable",
+      "images": [
+        {
+          "file": "docs/images/gallery-07.png",
+          "caption": "Galería descargable"
+        }
+      ]
+    },
+    {
+      "version": "0.6.0",
+      "title": "Tres diseños y Ambiente",
+      "images": [
+        {
+          "file": "docs/images/preset-classic-06.png",
+          "caption": "Diseño Clásico"
+        },
+        {
+          "file": "docs/images/preset-modern-06.png",
+          "caption": "Diseño Moderno"
+        },
+        {
+          "file": "docs/images/preset-immersive-06.png",
+          "caption": "Diseño Inmersivo"
+        },
+        {
+          "file": "docs/images/ambient-fjord-06.png",
+          "caption": "Paisaje de fiordo"
+        }
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "title": "Inicio compacto y biblioteca",
+      "images": [
+        {
+          "file": "docs/images/aura-home-05.png",
+          "caption": "Inicio compacto"
+        },
+        {
+          "file": "docs/images/aura-library-05.png",
+          "caption": "Biblioteca de aplicaciones"
+        }
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "title": "Centro de control e identidad Casa Aura",
+      "images": [
+        {
+          "file": "docs/images/aura-control.png",
+          "caption": "Centro de control Casa Aura"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "title": "Estabilidad del botón Inicio",
+      "images": []
+    },
+    {
+      "version": "0.2.0",
+      "title": "Primera versión pública",
+      "images": [
+        {
+          "file": "docs/images/home.png",
+          "caption": "Primer Inicio público"
+        },
+        {
+          "file": "docs/images/ambient.png",
+          "caption": "Primer modo Ambiente"
+        }
+      ]
+    }
+  ]
+}

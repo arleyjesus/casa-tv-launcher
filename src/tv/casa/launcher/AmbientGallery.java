@@ -11,8 +11,8 @@ final class AmbientGallery {
     static Bitmap decodeFile(Context context,java.io.File file,int fallback){
         try{
             BitmapFactory.Options options=new BitmapFactory.Options();options.inJustDecodeBounds=true;BitmapFactory.decodeFile(file.getPath(),options);
-            if(options.outWidth<1||options.outHeight<1||(long)options.outWidth*options.outHeight>GalleryPolicy.MAX_PIXELS)return decode(context,fallback%FILES.length);
-            int sample=1;while(options.outWidth/sample>2048||options.outHeight/sample>1152)sample*=2;
+            if(!OnlinePolicy.dimensions(options.outWidth,options.outHeight))return decode(context,fallback%FILES.length);
+            int sample=OnlinePolicy.imageSample(options.outWidth,options.outHeight,context.getResources().getDisplayMetrics().widthPixels,context.getResources().getDisplayMetrics().heightPixels);
             options.inJustDecodeBounds=false;options.inSampleSize=sample;options.inPreferredConfig=Bitmap.Config.RGB_565;options.inScaled=false;
             Bitmap result=BitmapFactory.decodeFile(file.getPath(),options);return result!=null?result:decode(context,fallback%FILES.length);
         }catch(Exception error){return decode(context,fallback%FILES.length);}

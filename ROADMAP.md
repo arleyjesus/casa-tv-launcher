@@ -46,7 +46,7 @@ Universal debloat, root, firmware flashing, removal of the original Google launc
 
 - Shipped in 0.6: three presets, three local landscapes and local timing/effect controls.
 - Shipped in 0.7: opt-in GitHub catalog and bounded manual downloads, with offline playback and built-in fallback.
-- Later: URL video after decoder, buffer and lifecycle testing; evaluate official YouTube playback separately.
+- Shipped in 0.10: bounded MP4 URL playback. Adaptive streaming and official YouTube playback remain separate work.
 - Research: adaptive selection and TV-specific capabilities, without claiming access to TCL AIPQ.
 
 See [design and ambient guide](docs/DISENOS-AMBIENTE.es.md).
@@ -61,5 +61,12 @@ See [design and ambient guide](docs/DISENOS-AMBIENTE.es.md).
 
 - Shipped in 0.9: static dark/glass-style themes, bottom fade, visual quality selector, native HDMI/accessory hub and on-demand web games.
 - Pending: physical controller testing, browser game compatibility matrix, longer sessions and performance comparisons.
-- Future ambient video: typed image/video catalog, independent player, bounded buffering, HTTPS validation and release on pause/dream exit. Keep video outside the APK; reject unsupported catalog types rather than silently trying them.
+- Shipped in 0.10: typed image/video catalog and an independent bounded MP4 player with HTTPS validation and release on exit. Other streaming types remain pending.
 - YouTube requires a supported official integration; no stream-link extraction. Adaptive image profiles require verified vendor state/control per setting and source.
+
+## Ambient online collections
+
+- Shipped in 0.10: schema-2 content catalog, manual HTTPS refresh/download, 64 MiB image cache, collections/favorites, local photo filters and muted MP4 range streaming with session limits.
+- Pending: HLS/DASH adaptive player, long-session and network-loss testing, more curated categories and additional TV models.
+- YouTube remains a separate official-player evaluation; no extraction or ad suppression.
+- Naming and logo studies stay local until the name is selected. Releases now have a visual archive alongside their notes.

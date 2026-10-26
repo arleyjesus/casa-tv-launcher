@@ -33,3 +33,11 @@ The module reads the one validated adaptive-content row and sends its original T
 The hub reads Android TV input states and game-controller input devices while visible; no Bluetooth discovery service or new permission is added. HDMI aliases, Casa-only opening times, controller detection times and up to eight web favorites/eight recent pages remain local, outside launcher backups. Clearing web lists does not clear WebView cookies or site storage.
 
 The on-demand WebView connects to the chosen third-party sites and their resources. Those sites receive the IP and normal browser data and can store cookies/site data. JavaScript and DOM storage are enabled for games; there is no Android JavaScript bridge. File/content access, insecure mixed content, uploads, downloads, popups, camera, microphone and geolocation are disabled. Main-frame navigation requires HTTPS and certificate errors are cancelled. The browser pauses on leaving and is destroyed on exit; Android may retain cached WebView processes. No web page is loaded by Home or Ambient.
+
+## Online ambient (0.10+)
+
+Catalog updates and image downloads require a user action. A bundled metadata catalog is available offline. HTTPS providers receive the connecting IP and normal request metadata, including a Casa version User-Agent. Content hashes, length, type and dimensions are checked; the image cache is capped at 64 MiB, with bounded in-progress files. Catalog entries cannot alter app preferences or execute actions.
+
+The optional MP4 player connects to the chosen source, is always muted and closes on exit. Automatic video is off initially. ACCESS_NETWORK_STATE is a normal permission used for the Wi-Fi-only option. Video/session limits count application-read payload bytes, not total billed traffic. There is no video file download to persistent storage.
+
+Custom source URLs, catalog ETags, online favorites and video choices remain in private app storage and are excluded from appearance exports; a custom URL may contain a private query token, so do not share it. Image filters remain local to ambient photos. GitHub is one catalog provider; third-party media servers have their own policies. No YouTube account or API credential is requested.

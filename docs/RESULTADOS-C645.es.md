@@ -99,3 +99,14 @@ Desde Casa se abrió la pantalla real de accesorios. Se excluyeron el control re
 TIC-80 cargó en el WebView del TV. Guardar un favorito, volver a verlo en el Centro de Juegos, ampliar la página y salir con Atrás funcionaron. La actividad del navegador quedó finalizada al salir. Esto valida el catálogo y la navegación, no una partida completa ni la compatibilidad de todos los juegos. PICO-8 y DOS Zone se comprobaron como fuentes oficiales en la web; sus juegos no se probaron en el TV.
 
 Pasaron las pruebas de Home, límites de apariencia, galería, política de imagen y URLs del navegador, junto con el contrato de permisos y la firma del APK. El registro revisado no mostró excepciones de Casa. No se hizo un benchmark de FPS/RAM, una prueba prolongada ni una comparación de los paneles nativos de TCL. No se cambió la calibración, AIPQ o Contenido adaptable para esta versión.
+
+
+## 0.10.0 · 2026-10-25
+
+Se descargaron seis imágenes y se repitió la operación: quedaron seis listas y cero archivos descargados en el segundo intento. Se seleccionó y mostró la foto de 3840 × 2160 de WordPress Photo Directory; Android la presenta dentro de su interfaz 1920 × 1080. El índice permite elegir colecciones y favoritas sin consultar un servicio al abrir el panel. La actualización remota sigue siendo manual.
+
+El vídeo ligero de NASA mostró imagen en la prueba. Se descartó su variante Full HD de gran tamaño al no funcionar con fluidez en esta sesión. La muestra Full HD de Big Buck Bunny avanzó hasta 9914 ms y leyó 1.046.987 bytes; el usuario confirmó que se veía y se movía en la pantalla física. El plano de vídeo acelerado de esta TCL no apareció en la captura ADB. El reproductor tenía un cliente asociado al proceso de Casa antes de salir y ninguno después de volver.
+
+Se revisó el regreso a imágenes tras fallos de carga. Las pruebas de lectura cubren cabeceras repetidas, cruces entre bloques, cancelación y un presupuesto exacto de datos. También pasaron las políticas de Home, diseños, galería anterior, imagen TCL, navegador y el contrato del APK. Las pruebas de cuota son del lector de vídeo, no una medición del tráfico facturado por la red.
+
+Se dejaron Todas las imágenes, vídeo automático desactivado y filtros neutros. No se realizó una prueba prolongada de salvapantallas con vídeo, una desconexión física de Wi-Fi, una prueba HDR ni un benchmark nuevo de FPS/RAM. HLS, DASH y YouTube no se incorporan a esta versión. El APK firmado ocupa 6.357.960 bytes, unos 24 KiB más que 0.9.0; las imágenes y vídeos online no están empaquetados en él.
