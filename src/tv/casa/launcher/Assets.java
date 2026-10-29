@@ -16,7 +16,7 @@ final class Assets {
     private static Bitmap home;private static String homePreset="";
     static void bindWallpaper(MainActivity owner,android.widget.ImageView view){
         String preset=owner.preset();if(home!=null&&preset.equals(homePreset)){view.setImageBitmap(home);return;}
-        owner.loader.execute(()->{Bitmap result=null;try(InputStream in=owner.getAssets().open("home/"+preset+".webp")){BitmapFactory.Options o=new BitmapFactory.Options();o.inPreferredConfig=Bitmap.Config.ARGB_8888;result=BitmapFactory.decodeStream(in,null,o);}catch(Exception ignored){}final Bitmap bitmap=result;owner.handler.post(()->{if(owner.alive&&owner.root!=null&&view.getParent()==owner.root){if(bitmap!=null){home=bitmap;homePreset=preset;view.setImageBitmap(bitmap);}}});});
+        owner.loader.execute(()->{Bitmap result=null;try(InputStream in=owner.getAssets().open(preset.equals("classic")?"landscape.png":"ambient-fjord.png")){BitmapFactory.Options o=new BitmapFactory.Options();o.inPreferredConfig=Bitmap.Config.ARGB_8888;result=BitmapFactory.decodeStream(in,null,o);}catch(Exception ignored){}final Bitmap bitmap=result;owner.handler.post(()->{if(owner.alive&&owner.root!=null&&view.getParent()==owner.root){if(bitmap!=null){home=bitmap;homePreset=preset;view.setImageBitmap(bitmap);}}});});
     }
     private static final LruCache<String,Drawable.ConstantState> icons=new LruCache<>(24);
     private static final LruCache<String,Drawable.ConstantState> banners=new LruCache<>(8);

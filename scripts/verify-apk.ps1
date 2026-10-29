@@ -18,7 +18,7 @@ try {
     if(@($zip.Entries | Where-Object { $_.FullName.Contains('\') }).Count){throw 'APK contains Windows ZIP paths.'}
     if($badging -match "versionCode='11'") {
         foreach($preset in @('classic','modern','immersive')) {
-            if($null -eq $zip.GetEntry("assets/home/$preset.webp")){throw "Missing home wallpaper: $preset"}
+            if($null -eq $zip.GetEntry($(if($preset -eq "classic"){"assets/landscape.png"}else{"assets/ambient-fjord.png"}))){throw "Missing home wallpaper: $preset"}
         }
     }
 } finally {$zip.Dispose()}

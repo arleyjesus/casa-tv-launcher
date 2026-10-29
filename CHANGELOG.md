@@ -2,6 +2,8 @@
 
 ## 0.11.0 · en desarrollo, sin release
 
+- Refinamiento: filas más bajas, tarjetas más transparentes, sombras y halo inmersivo. Se retiran los tres WebP nuevos y se reutilizan paisajes existentes. [Capturas y límites](docs/MODOS-VISUALES.es.md).
+
 - Rediseño del 28 de octubre: Clásico sin accesos HDMI duplicados, Moderno con seis favoritas e Inmersivo con iconos flotantes. Paleta grafito, recorte redondeado y cuatro niveles de efectos revisados. [Comparación visual](docs/MODOS-VISUALES.es.md).
 
 - Nueva marca Velira TV, icono/banner originales y adaptación visual de Clásico, Moderno e Inmersivo.

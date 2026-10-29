@@ -33,7 +33,7 @@ final class HomeLayouts {
     static FrameLayout dock(MainActivity a,float x,float y,float w,float h){FrameLayout tray=new FrameLayout(a);tray.setClipChildren(false);tray.setClipToPadding(false);tray.setBackground(AuraTheme.dock(a,a.px(22)));a.put(tray,x,y,w,h);return tray;}
     static void inside(MainActivity a,FrameLayout p,View v,float x,float y,float w,float h){FrameLayout.LayoutParams lp=new FrameLayout.LayoutParams(a.px(w),a.px(h));lp.leftMargin=a.px(x);lp.topMargin=a.px(y);p.addView(v,lp);}
     static FrameLayout app(MainActivity a,String pkg){
-        FrameLayout card=new FrameLayout(a);a.focusable(card);card.setBackground(AuraTheme.states(a,a.px(a.preset().equals("immersive")?24:15),MainActivity.GOLD));card.setClipToOutline(true);card.setOutlineProvider(ViewOutlineProvider.BACKGROUND);card.setTag(pkg);card.setContentDescription(a.label(pkg));
+        FrameLayout card=new FrameLayout(a);a.focusable(card);card.setBackground(new HomeAppSurface(a,a.px(a.preset().equals("immersive")?24:15),a.preset().equals("immersive")));card.setClipToOutline(false);card.setOutlineProvider(ViewOutlineProvider.BACKGROUND);if(AuraTheme.level(a)>0)card.setElevation(a.px(a.preset().equals("immersive")?5:2));card.setTag(pkg);card.setContentDescription(a.label(pkg));
         ImageView image=new ImageView(a);image.setScaleType(ImageView.ScaleType.FIT_CENTER);image.setClipToOutline(true);image.setOutlineProvider(new ViewOutlineProvider(){public void getOutline(View v,android.graphics.Outline o){o.setRoundRect(0,0,v.getWidth(),v.getHeight(),a.px(a.preset().equals("immersive")?19:11));}});FrameLayout.LayoutParams ip=new FrameLayout.LayoutParams(-1,-1);ip.setMargins(a.px(6),a.px(6),a.px(6),a.px(6));card.addView(image,ip);
         TextView name=a.text(a.label(pkg),12,MainActivity.INK);name.setMaxLines(1);name.setEllipsize(TextUtils.TruncateAt.END);name.setGravity(Gravity.CENTER);FrameLayout.LayoutParams np=new FrameLayout.LayoutParams(-1,a.px(23),Gravity.BOTTOM);np.leftMargin=a.px(6);np.rightMargin=a.px(6);np.bottomMargin=a.px(3);card.addView(name,np);name.setVisibility(View.GONE);if(a.preset().equals("immersive")){Assets.bindIcon(a,image,pkg);name.setVisibility(View.GONE);}else Assets.bindHome(a,image,pkg,name);
         card.setOnClickListener(v->a.launch(pkg));card.setOnLongClickListener(v->{a.centerLongHandled=a.centerHeld;a.showApps(true);return true;});a.favoritesViews.add(card);return card;
@@ -46,7 +46,7 @@ final class HomeLayouts {
     static void classic(MainActivity a,ArrayList<String> packages){
         a.clock=a.text("",62,MainActivity.INK);a.clock.setTypeface(Typeface.create("sans-serif-light",0));a.clock.setMaxLines(2);a.put(a.clock,46,120,600,132);
         a.hero=a.text("Tu espacio, a tu manera.",17,MainActivity.MUTED);a.put(a.hero,48,248,600,30);
-        FrameLayout tray=dock(a,46,306,868,108);favorites(a,packages,tray,6,868,108);actionBar(a,130,444,700);
+        FrameLayout tray=dock(a,46,328,868,108);favorites(a,packages,tray,6,868,108);actionBar(a,130,462,700);
     }
     static void modern(MainActivity a,ArrayList<String> packages){
         FrameLayout feature=dock(a,36,90,542,220);
@@ -64,12 +64,12 @@ final class HomeLayouts {
     static void immersive(MainActivity a,ArrayList<String> packages){
         a.clock=a.text("",60,MainActivity.INK);a.clock.setTypeface(Typeface.create("sans-serif-light",0));a.clock.setMaxLines(2);a.put(a.clock,48,124,600,118);
         a.hero=a.text("Tu espacio, a tu manera.",17,MainActivity.INK);a.put(a.hero,49,244,600,30);
-        FrameLayout floating=new FrameLayout(a);floating.setClipChildren(false);a.put(floating,100,311,760,126);
-        int count=Math.min(6,packages.size());float width=84,gap=20,start=(760-count*width-Math.max(0,count-1)*gap)/2;
+        FrameLayout floating=new FrameLayout(a);floating.setClipChildren(false);a.put(floating,100,340,760,126);
+        int count=Math.min(6,packages.size());float width=84,gap=16,start=(760-count*width-Math.max(0,count-1)*gap)/2;
         for(int i=0;i<count;i++)inside(a,floating,app(a,packages.get(i)),start+i*(width+gap),14,width,84);
         if(count==0)favorites(a,packages,floating,6,760,126);
-        a.contextName=a.text("",13,MainActivity.INK);a.contextName.setGravity(Gravity.CENTER);a.put(a.contextName,250,423,460,27);
-        actionBar(a,240,472,480);
+        a.contextName=a.text("",13,MainActivity.INK);a.contextName.setGravity(Gravity.CENTER);a.put(a.contextName,250,450,460,24);
+        actionBar(a,240,490,480);
     }
 
     static View utility(MainActivity a,String title,String icon,Runnable action,int index){LinearLayout tile=new LinearLayout(a);tile.setGravity(Gravity.CENTER);a.focusable(tile);tile.setTag("utility-"+index);tile.setContentDescription(title);tile.setOnClickListener(v->action.run());tile.addView(new HomeGlyph(a,icon),new LinearLayout.LayoutParams(a.px(20),a.px(20)));TextView label=a.text(title,12,MainActivity.INK);label.setMaxLines(1);label.setEllipsize(TextUtils.TruncateAt.END);LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(-2,-1);lp.leftMargin=a.px(8);tile.addView(label,lp);a.utilityViews.add(tile);return tile;}

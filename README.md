@@ -12,7 +12,7 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 [Ver los tres modos y sus cambios](docs/MODOS-VISUALES.es.md)
 
-![Velira TV · Moderno en desarrollo](docs/images/velira-modern-redesign-011.png)
+![Velira TV · Moderno en desarrollo](docs/images/velira-modern-refined-011.png)
 
 ## Qué ofrece
 
