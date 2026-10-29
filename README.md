@@ -80,3 +80,5 @@ Para informar de un fallo, abre un [issue](https://github.com/arleyjesus/velira-
 Código y recursos originales bajo [MIT](LICENSE): puedes usarlos, modificarlos y compartirlos conservando el aviso de licencia. Los paisajes se crearon con asistencia de IA. Los nombres e iconos de las aplicaciones pertenecen a sus titulares; Casa obtiene los iconos de las apps instaladas y no redistribuye sus APK. [Créditos](NOTICE.md).
 
 Proyecto independiente, sin afiliación con TCL, Google, Projectivy ni las plataformas de streaming.
+
+[Archivo por versión y apartado](docs/history/README.md).

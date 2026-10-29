@@ -11,6 +11,7 @@ final class HomeGlyph extends View {
         else if(kind.equals("apps")){for(int y=3;y<=13;y+=10)for(int x=3;x<=13;x+=10)c.drawRoundRect(x,y,x+7,y+7,1.5f,1.5f,p);}
         else if(kind.equals("ambient")){Path path=new Path();path.moveTo(4,21);path.cubicTo(1,9,10,3,22,2);path.cubicTo(21,16,14,22,4,21);path.moveTo(3,22);path.lineTo(17,8);c.drawPath(path,p);}
         else if(kind.equals("game")){Path path=new Path();path.moveTo(7,5);path.cubicTo(2,5,1,13,2,19);path.cubicTo(3,23,8,15,9,15);path.lineTo(15,15);path.cubicTo(16,15,21,23,22,19);path.cubicTo(23,13,22,5,17,5);path.close();c.drawPath(path,p);c.drawLine(5,10,10,10,p);c.drawLine(7.5f,7.5f,7.5f,12.5f,p);c.drawCircle(16,9,1,p);c.drawCircle(19,12,1,p);}
+        else if(kind.equals("web")){c.drawCircle(12,12,10,p);c.drawOval(7,2,17,22,p);c.drawLine(2,12,22,12,p);c.drawLine(4,7,20,7,p);c.drawLine(4,17,20,17,p);}
         else{c.drawCircle(12,12,6,p);c.drawCircle(12,12,2,p);for(int i=0;i<8;i++){c.save();c.rotate(i*45,12,12);c.drawLine(12,2,12,5,p);c.restore();}}
         c.restore();
     }

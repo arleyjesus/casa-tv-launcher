@@ -72,3 +72,5 @@ Los banners e iconos son los reales: los fondos blancos incluidos por sus autore
 - [Primera adaptación 0.11](VELIRA-011-LOCAL.es.md): bandeja compartida y carrusel anterior.
 - Rediseño actual: modos diferenciados, sin HDMI individuales en Inicio, seis favoritas en Moderno y dock flotante en Inmersivo.
 - [Versiones anteriores](HISTORIAL-VISUAL.es.md).
+
+[Archivo por versión y apartado](history/README.md).

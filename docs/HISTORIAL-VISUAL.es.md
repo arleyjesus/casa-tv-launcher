@@ -88,3 +88,5 @@ Esta versión no tiene capturas propias archivadas.
 ![Primer Inicio público](https://raw.githubusercontent.com/arleyjesus/velira-tv/v0.2.0/docs/images/home.png)
 
 ![Primer modo Ambiente](https://raw.githubusercontent.com/arleyjesus/velira-tv/v0.2.0/docs/images/ambient.png)
+
+[Archivo por versión y apartado](history/README.md).

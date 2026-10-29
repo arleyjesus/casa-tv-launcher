@@ -4,6 +4,8 @@ $data=[IO.File]::ReadAllText((Join-Path $root 'docs/history/releases.json')) | C
 $lines=[System.Collections.Generic.List[string]]::new()
 $lines.Add('# Evolución visual')
 $lines.Add('')
+$lines.Add('[Archivo por versión y apartado](history/README.md)')
+$lines.Add('')
 $lines.Add('Cada versión conserva sus capturas y su enlace de descarga. El README muestra la interfaz actual; este archivo permite recorrer las anteriores. Las imágenes apuntan a la etiqueta de cada versión y no se sustituyen al actualizar el proyecto.')
 $lines.Add('')
 $lines.Add('[Cambios de código](../CHANGELOG.md) · [Resultados en C645](RESULTADOS-C645.es.md)')
