@@ -5,7 +5,7 @@ import java.net.URI;
 final class OnlinePolicy {
     static final int MAX_CATALOG=262144,MAX_ITEMS=48,MAX_COLLECTIONS=12,MAX_IMAGE=8*1024*1024;
     static final long CACHE_BYTES=64L*1024*1024,MAX_PIXELS=4096L*4096;
-    static final String DEFAULT_CATALOG="https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/main/resources/ambient/catalog-v2.json";
+    static final String DEFAULT_CATALOG="https://raw.githubusercontent.com/arleyjesus/velira-tv/main/resources/ambient/catalog-v2.json";
     static boolean https(String value){if(value==null||value.length()>2048)return false;try{URI u=new URI(value);return "https".equalsIgnoreCase(u.getScheme())&&u.getHost()!=null&&u.getRawUserInfo()==null&&u.getRawFragment()==null&&(u.getPort()==-1||u.getPort()==443);}catch(Exception e){return false;}}
     static boolean jsonDepth(String text){if(text==null||text.length()>MAX_CATALOG)return false;int depth=0;boolean string=false,escape=false;for(int i=0;i<text.length();i++){char c=text.charAt(i);if(string){if(escape)escape=false;else if(c=='\\')escape=true;else if(c=='"')string=false;}else if(c=='"')string=true;else if(c=='{'||c=='['){if(++depth>24)return false;}else if(c=='}'||c==']'){if(--depth<0)return false;}}return depth==0&&!string;}
     static boolean id(String s){return s!=null&&s.matches("[a-z0-9][a-z0-9-]{0,63}");}

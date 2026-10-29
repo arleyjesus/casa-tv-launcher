@@ -8,7 +8,7 @@ Para el dispositivo de referencia, consulta además [protección de memoria de T
 
 La versión actual se prueba en TCL 50C645, Android 11, V8-R51MT05-LF1V652.021344. No instales firmware de otro modelo para usar Casa. Guarda una vía para abrir los ajustes originales y conserva habilitados Google TV y los servicios TCL.
 
-Descarga la APK y SHA256SUMS.txt desde [Releases](https://github.com/arleyjesus/casa-tv-launcher/releases). No hace falta Projectivy, root, una cuenta de Casa ni aplicar debloat.
+Descarga la APK y SHA256SUMS.txt desde [Releases](https://github.com/arleyjesus/velira-tv/releases). No hace falta Projectivy, root, una cuenta de Casa ni aplicar debloat.
 
 ## ADB desde Windows
 

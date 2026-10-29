@@ -10,11 +10,11 @@ $lines.Add('[Cambios de código](../CHANGELOG.md) · [Resultados en C645](RESULT
 foreach($release in ($data.releases | Sort-Object { [version]$_.version } -Descending)){
     if($release.version -notmatch '^\d+\.\d+\.\d+$'){throw 'Version no valida'}
     $lines.Add('');$lines.Add("## $($release.version) · $($release.title)");$lines.Add('')
-    $lines.Add("[Descargar y leer notas](https://github.com/arleyjesus/casa-tv-launcher/releases/tag/v$($release.version))");$lines.Add('')
+    $lines.Add("[Descargar y leer notas](https://github.com/arleyjesus/velira-tv/releases/tag/v$($release.version))");$lines.Add('')
     if($release.images.Count -eq 0){$lines.Add('Esta versión no tiene capturas propias archivadas.');continue}
     foreach($image in $release.images){
         if($image.file -notmatch '^docs/images/[a-zA-Z0-9-]+\.png$'){throw 'Ruta de captura no valida'}
-        $lines.Add("![$($image.caption)](https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/v$($release.version)/$($image.file))");$lines.Add('')
+        $lines.Add("![$($image.caption)](https://raw.githubusercontent.com/arleyjesus/velira-tv/v$($release.version)/$($image.file))");$lines.Add('')
     }
 }
 while($lines.Count -gt 0 -and $lines[$lines.Count-1] -eq ''){$lines.RemoveAt($lines.Count-1)}

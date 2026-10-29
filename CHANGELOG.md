@@ -2,6 +2,8 @@
 
 ## 0.11.0 · en desarrollo, sin release
 
+- Rediseño del 28 de octubre: Clásico sin accesos HDMI duplicados, Moderno con seis favoritas e Inmersivo con iconos flotantes. Paleta grafito, recorte redondeado y cuatro niveles de efectos revisados. [Comparación visual](docs/MODOS-VISUALES.es.md).
+
 - Nueva marca Velira TV, icono/banner originales y adaptación visual de Clásico, Moderno e Inmersivo.
 - Tres fondos originales de Inicio, bandejas comunes, banners de apps asíncronos y navegación con el mando conservada.
 - Transporte MP4 con detección de truncados, validación de rangos y ETag fuerte por sesión.

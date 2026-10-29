@@ -8,9 +8,11 @@ Desarrollado y probado específicamente en **TCL 50C645 · Android 11 · V652**.
 
 [Resultados reales en C645](docs/RESULTADOS-C645.es.md) · [Inicio estable con TCL Guard](docs/TCL-C645-GUARD.es.md) · [Historial visual](docs/HISTORIAL-VISUAL.es.md)
 
-[Descargar APK y versiones](https://github.com/arleyjesus/casa-tv-launcher/releases) · [Instalación](docs/INSTALL.es.md) · [Compatibilidad](docs/COMPATIBILITY.md) · [English](README.en.md)
+[Descargar APK y versiones](https://github.com/arleyjesus/velira-tv/releases) · [Instalación](docs/INSTALL.es.md) · [Compatibilidad](docs/COMPATIBILITY.md) · [English](README.en.md)
 
-![Inicio de Casa Aura TV 0.9](docs/images/aura-home-09.png)
+[Ver los tres modos y sus cambios](docs/MODOS-VISUALES.es.md)
+
+![Velira TV · Moderno en desarrollo](docs/images/velira-modern-redesign-011.png)
 
 ## Qué ofrece
 
@@ -42,7 +44,7 @@ Los accesos a ajustes y entradas incluyen comportamiento específico de TCL. La 
 
 ## Instalar o actualizar
 
-1. Descarga la APK de una [versión publicada](https://github.com/arleyjesus/casa-tv-launcher/releases).
+1. Descarga la APK de una [versión publicada](https://github.com/arleyjesus/velira-tv/releases).
 2. Instálala y ábrela primero como una aplicación normal.
 3. Prueba navegación, aplicaciones, imagen, sonido y entradas antes de cambiar Inicio.
 4. Si quieres que Home abra Casa, activa **Casa Aura · Botón Inicio** en Accesibilidad.
@@ -71,7 +73,7 @@ Casa usa vistas Android nativas y recursos locales. La muestra de navegación es
 
 El proyecto usa Java y herramientas oficiales del SDK, sin dependencias externas de aplicación ni Gradle en esta versión. [Compilación y firma](docs/BUILD.md) · [Contribuir](CONTRIBUTING.md) · [Hoja de ruta](ROADMAP.md) · [Historial](CHANGELOG.md) · [Evolución visual](docs/HISTORIAL-VISUAL.es.md).
 
-Para informar de un fallo, abre un [issue](https://github.com/arleyjesus/casa-tv-launcher/issues) con modelo, Android, firmware y pasos de reproducción. No publiques cuentas, IP, credenciales, claves ni volcados completos del TV.
+Para informar de un fallo, abre un [issue](https://github.com/arleyjesus/velira-tv/issues) con modelo, Android, firmware y pasos de reproducción. No publiques cuentas, IP, credenciales, claves ni volcados completos del TV.
 
 ## Licencia y créditos
 

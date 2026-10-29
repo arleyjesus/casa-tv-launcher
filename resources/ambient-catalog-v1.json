@@ -4,19 +4,19 @@
     {
       "sha256": "d9c6365a5f0552ccf41f8d73cf1fb19405dfd345bda7d69fdbd91e576f7c6039",
       "bytes": 1909521,
-      "url": "https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/v0.6.0/assets/landscape.png",
+      "url": "https://raw.githubusercontent.com/arleyjesus/velira-tv/v0.6.0/assets/landscape.png",
       "file": "landscape.png"
     },
     {
       "sha256": "6a376e18bd0e7e75f2606de1810ef9629b3bcc42b18bc09229bb75e2413fcdf1",
       "bytes": 2107887,
-      "url": "https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/v0.6.0/assets/ambient-fjord.png",
+      "url": "https://raw.githubusercontent.com/arleyjesus/velira-tv/v0.6.0/assets/ambient-fjord.png",
       "file": "ambient-fjord.png"
     },
     {
       "sha256": "7c76d81f0abceaa0fb477e7250e3b0063df82eb16d03f13d069a9d5ee554cafe",
       "bytes": 2236582,
-      "url": "https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/v0.6.0/assets/ambient-forest.png",
+      "url": "https://raw.githubusercontent.com/arleyjesus/velira-tv/v0.6.0/assets/ambient-forest.png",
       "file": "ambient-forest.png"
     }
   ],

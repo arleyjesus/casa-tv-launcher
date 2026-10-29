@@ -8,10 +8,10 @@ import java.security.MessageDigest;
 final class GalleryPolicy {
     static final int MAX_IMAGES=3, MAX_CATALOG=65536, MAX_IMAGE=4*1024*1024;
     static final long MAX_PIXELS=4096L*2160;
-    static final String BASE="https://raw.githubusercontent.com/arleyjesus/casa-tv-launcher/";
+    static final String BASE="https://raw.githubusercontent.com/arleyjesus/velira-tv/";
     static final String CATALOG=BASE+"main/resources/ambient-catalog-v1.json";
     static boolean imageUrl(String url){
-        try{URI uri=new URI(url);return "https".equals(uri.getScheme())&&"raw.githubusercontent.com".equals(uri.getHost())&&uri.getPort()==-1&&uri.getRawQuery()==null&&uri.getRawFragment()==null&&uri.getRawUserInfo()==null&&uri.getRawPath().matches("/arleyjesus/casa-tv-launcher/v[0-9]+\\.[0-9]+\\.[0-9]+/assets/[a-z0-9-]+\\.png");}catch(Exception e){return false;}
+        try{URI uri=new URI(url);return "https".equals(uri.getScheme())&&"raw.githubusercontent.com".equals(uri.getHost())&&uri.getPort()==-1&&uri.getRawQuery()==null&&uri.getRawFragment()==null&&uri.getRawUserInfo()==null&&uri.getRawPath().matches("/arleyjesus/(?:velira-tv|casa-tv-launcher)/v[0-9]+\\.[0-9]+\\.[0-9]+/assets/[a-z0-9-]+\\.png");}catch(Exception e){return false;}
     }
     static boolean filename(String value){return value!=null&&value.matches("[a-z0-9-]{1,64}\\.png");}
     static void checkInterrupted()throws InterruptedIOException{if(Thread.currentThread().isInterrupted())throw new InterruptedIOException("Descarga cancelada");}
