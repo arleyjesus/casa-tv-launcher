@@ -1,4 +1,6 @@
-# Casa Aura TV
+# Velira TV
+
+Antes Casa Aura TV. La versión pública disponible es **0.10.0**; el código en desarrollo **0.11** incorpora la marca Velira, los tres diseños adaptados y las correcciones de medios. El código está disponible en el repositorio; el APK estable continúa en 0.10.0 mientras se revisa la estabilidad. [Estado y evidencia de la candidata](docs/VELIRA-011-LOCAL.es.md).
 
 **Un inicio tranquilo para tu televisor.** Launcher independiente para Android TV y Google TV, con favoritas, accesos HDMI y salvapantallas ambiente.
 

@@ -13,10 +13,12 @@ final class FocusBackdrop {
     FocusBackdrop(MainActivity a,ImageView view){owner=a;this.view=view;}
     void select(String pkg){
         if(owner.contextName!=null)owner.contextName.setText(owner.label(pkg));
+        if(!owner.resumed)return;
         if(pending!=null)owner.handler.removeCallbacks(pending);final int request=++generation;
         Bitmap cached=cache.get(pkg);if(cached!=null){view.setImageBitmap(cached);return;}
-        pending=()->owner.loader.execute(()->{Bitmap result=soften(Assets.icon(owner,pkg));owner.handler.post(()->{if(!owner.alive||request!=generation||owner.backdrop!=this)return;if(result!=null){cache.put(pkg,result);view.setImageBitmap(result);}});});owner.handler.postDelayed(pending,90);
+        pending=()->owner.loader.execute(()->{Bitmap result=soften(Assets.icon(owner,pkg));owner.handler.post(()->{if(!owner.alive||!owner.resumed||request!=generation||owner.backdrop!=this)return;if(result!=null){cache.put(pkg,result);view.setImageBitmap(result);}});});owner.handler.postDelayed(pending,90);
     }
+    void pause(){generation++;if(pending!=null)owner.handler.removeCallbacks(pending);pending=null;}
     void stop(){generation++;if(pending!=null)owner.handler.removeCallbacks(pending);view.setImageDrawable(null);cache.evictAll();}
     static Bitmap soften(Drawable icon){
         if(icon==null)return null;int w=48,h=27;Bitmap small=Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888);Canvas canvas=new Canvas(small);icon.setBounds(0,-10,w,w-10);icon.draw(canvas);

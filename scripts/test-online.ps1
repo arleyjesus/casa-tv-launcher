@@ -12,7 +12,22 @@ foreach($relative in @('resources/ambient/catalog-v2.json','assets/ambient-catal
     if($catalog.schema -ne 2 -or $catalog.collections.Count -lt 1 -or $catalog.collections.Count -gt 12){throw 'Invalid catalog fixture.'}
 }
 
-& "$JavaHome\bin\javac.exe" --release 8 -encoding UTF-8 -cp $dest -d $dest (Join-Path $root 'tests/stubs/android/media/MediaDataSource.java') (Join-Path $root 'src/tv/casa/launcher/AmbientHttp.java') (Join-Path $root 'src/tv/casa/launcher/RangeMediaSource.java') (Join-Path $root 'tests/RangeMediaSourceTest.java')
+& "$JavaHome\bin\javac.exe" --release 8 -encoding UTF-8 -cp $dest -d $dest (Join-Path $root 'tests/stubs/android/media/MediaDataSource.java') (Join-Path $root 'src/tv/casa/launcher/ImageTransfer.java') (Join-Path $root 'src/tv/casa/launcher/AmbientHttp.java') (Join-Path $root 'src/tv/casa/launcher/RangeMediaSource.java') (Join-Path $root 'tests/RangeMediaSourceTest.java')
 if($LASTEXITCODE){throw 'Range source test compilation failed.'}
 & "$JavaHome\bin\java.exe" -cp $dest tv.casa.launcher.RangeMediaSourceTest
 if($LASTEXITCODE){throw 'Range source test failed.'}
+
+& "$JavaHome\bin\javac.exe" --release 8 -encoding UTF-8 -cp $dest -d $dest (Join-Path $root 'src/tv/casa/launcher/AmbientSession.java') (Join-Path $root 'tests/AmbientSessionTest.java')
+if($LASTEXITCODE){throw 'Ambient session compilation failed.'}
+& "$JavaHome\bin\java.exe" -cp $dest tv.casa.launcher.AmbientSessionTest
+if($LASTEXITCODE){throw 'Ambient session failed.'}
+
+& "$JavaHome\bin\javac.exe" --release 8 -encoding UTF-8 -cp $dest -d $dest (Join-Path $root 'tests/ImageTransferTest.java')
+if($LASTEXITCODE){throw 'Image transfer compilation failed.'}
+& "$JavaHome\bin\java.exe" -cp $dest tv.casa.launcher.ImageTransferTest
+if($LASTEXITCODE){throw 'Image transfer failed.'}
+
+& "$JavaHome\bin\javac.exe" --release 8 -encoding UTF-8 -cp $dest -d $dest (Join-Path $root 'tests/AmbientHttpTest.java')
+if($LASTEXITCODE){throw 'HTTP policy compilation failed.'}
+& "$JavaHome\bin\java.exe" -cp $dest tv.casa.launcher.AmbientHttpTest
+if($LASTEXITCODE){throw 'HTTP policy failed.'}

@@ -39,11 +39,10 @@ final class AppLibraryView extends LinearLayout {
     void cancelAnimation(){animate().cancel();}
     void invalidatePackages(){generation++;if(getVisibility()==VISIBLE)reload();}
     private void reload(){
-        final int request=++generation;count.setText("Cargando aplicaciones…");
+        final int request=++generation,packageRequest=owner.packageGeneration;count.setText("Cargando aplicaciones…");
         owner.loader.execute(()->{
             ArrayList<String> found=owner.apps();
-            for(int i=0;i<Math.min(18,found.size());i++)Assets.icon(owner,found.get(i));
-            owner.handler.post(()->{if(!owner.alive||request!=generation)return;owner.appCache=found;display(found);});
+            owner.handler.post(()->{if(!owner.alive||request!=generation||packageRequest!=owner.packageGeneration)return;owner.appCache=found;display(found);});
         });
     }
     private void display(List<String> found){if(!packages.equals(found)){packages.clear();packages.addAll(found);adapter.notifyDataSetChanged();}String summary=packages.size()+" aplicaciones   ·   Arriba para volver   ·   Mantén OK para editar favoritas";if(!summary.contentEquals(count.getText()))count.setText(summary);if(getVisibility()==VISIBLE)grid.requestFocus();}
@@ -60,7 +59,7 @@ final class AppLibraryView extends LinearLayout {
                 ImageView icon=new ImageView(owner);icon.setScaleType(ImageView.ScaleType.FIT_CENTER);cell.addView(icon,new LayoutParams(owner.px(46),owner.px(46)));
                 TextView name=owner.text("",12,MainActivity.INK);name.setGravity(Gravity.CENTER);name.setMaxLines(1);name.setEllipsize(android.text.TextUtils.TruncateAt.END);LayoutParams np=new LayoutParams(-1,owner.px(23));np.topMargin=owner.px(3);cell.addView(name,np);
             }
-            String pkg=packages.get(position);((ImageView)cell.getChildAt(0)).setImageDrawable(Assets.icon(owner,pkg));String name=owner.label(pkg);((TextView)cell.getChildAt(1)).setText(name);cell.setContentDescription(name);return cell;
+            String pkg=packages.get(position);Assets.bindIcon(owner,(ImageView)cell.getChildAt(0),pkg);String name=owner.label(pkg);((TextView)cell.getChildAt(1)).setText(name);cell.setContentDescription(name);return cell;
         }
     }
 }

@@ -36,6 +36,14 @@ jobs:
       - name: Test online ambient limits
         shell: pwsh
         run: ./scripts/test-online.ps1
+      - name: Ensure pinned Android platform and build tools
+        shell: pwsh
+        run: |
+          $manager = Join-Path $env:ANDROID_HOME 'cmdline-tools/latest/bin/sdkmanager.bat'
+          if (!(Test-Path (Join-Path $env:ANDROID_HOME 'platforms/android-37.0/android.jar')) -or !(Test-Path (Join-Path $env:ANDROID_HOME 'build-tools/36.0.0/aapt2.exe'))) {
+            & $manager 'platforms;android-37.0' 'build-tools;36.0.0'
+            if ($LASTEXITCODE) { throw 'Pinned Android SDK installation failed.' }
+          }
       - name: Build unsigned APK with installed Android SDK
         shell: pwsh
         run: ./scripts/build.ps1

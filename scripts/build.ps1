@@ -2,7 +2,7 @@
 param(
     [string]$AndroidSdk = $(if ($env:ANDROID_HOME) { $env:ANDROID_HOME } elseif ($env:ANDROID_SDK_ROOT) { $env:ANDROID_SDK_ROOT } else { '' }),
     [string]$JavaHome = $env:JAVA_HOME,
-    [string]$AndroidPlatform = '',
+    [string]$AndroidPlatform = 'android-37.0',
     [string]$BuildToolsVersion = '36.0.0',
     [switch]$Sign
 )
@@ -35,6 +35,19 @@ $unsignedApk = Join-Path $buildRoot "Casa-TV-Launcher-v$version-unsigned.apk"
 if ($LASTEXITCODE) { throw 'Resource compilation failed.' }
 & "$tools\aapt2.exe" link -o $baseApk --manifest (Join-Path $repoRoot 'AndroidManifest.xml') -I $androidJar -A (Join-Path $repoRoot 'assets') $resources
 if ($LASTEXITCODE) { throw 'Resource linking failed.' }
+# Some Windows aapt2 builds retain backslashes in nested asset ZIP entries.
+# Android AssetManager requires forward slashes on the device.
+Add-Type -AssemblyName System.IO.Compression
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$assetZip=[IO.Compression.ZipFile]::Open($baseApk,[IO.Compression.ZipArchiveMode]::Update)
+try {
+    foreach($entry in @($assetZip.Entries | Where-Object { $_.FullName.Contains('\') })) {
+        $replacement=$assetZip.CreateEntry($entry.FullName.Replace('\','/'))
+        $inputStream=$entry.Open();$outputStream=$replacement.Open()
+        try {$inputStream.CopyTo($outputStream)} finally {$inputStream.Dispose();$outputStream.Dispose()}
+        $entry.Delete()
+    }
+} finally {$assetZip.Dispose()}
 $sources = @(Get-ChildItem -LiteralPath (Join-Path $repoRoot 'src') -Recurse -Filter '*.java' | ForEach-Object FullName)
 & "$JavaHome\bin\javac.exe" -encoding UTF-8 --release 8 -classpath $androidJar -d $classesDir @sources
 if ($LASTEXITCODE) { throw 'Java compilation failed.' }

@@ -10,6 +10,18 @@ $badging = (& $aapt dump badging $ApkPath) -join "`n"
 if ($LASTEXITCODE) { throw 'Could not inspect APK.' }
 if ($badging -notmatch "package: name='tv.casa.launcher'") { throw 'Unexpected application ID.' }
 if ($badging -notmatch "sdkVersion:'26'") { throw 'Unexpected minimum Android API.' }
+if ($badging -notmatch "targetSdkVersion:'30'") { throw 'Unexpected target SDK change.' }
+Add-Type -AssemblyName System.IO.Compression
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zip=[IO.Compression.ZipFile]::OpenRead((Resolve-Path -LiteralPath $ApkPath).Path)
+try {
+    if(@($zip.Entries | Where-Object { $_.FullName.Contains('\') }).Count){throw 'APK contains Windows ZIP paths.'}
+    if($badging -match "versionCode='11'") {
+        foreach($preset in @('classic','modern','immersive')) {
+            if($null -eq $zip.GetEntry("assets/home/$preset.webp")){throw "Missing home wallpaper: $preset"}
+        }
+    }
+} finally {$zip.Dispose()}
 if ($badging -match 'uses-permission[^\r\n]*android.permission.(WRITE_SECURE_SETTINGS|MANAGE_EXTERNAL_STORAGE)') { throw 'Privileged permission contract changed. Review required.' }
 if ($badging -notmatch 'uses-permission[^\r\n]*android.permission.INTERNET') { throw 'Explicit network permission missing.' }
 $permissions = [regex]::Matches($badging, "uses-permission: name='([^']+)'")

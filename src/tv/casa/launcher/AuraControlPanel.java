@@ -9,7 +9,7 @@ import android.widget.*;
 /** Native control surface: static translucent fills, no blur or additional artwork. */
 final class AuraControlPanel {
     static Dialog show(MainActivity a, Runnable[] actions) {
-        String[] titles={"Apariencia","Favoritas","Ordenar","Ajustes del TV","Conexiones","Ambiente","Copias","Inicio","Acerca de Aura"};
+        String[] titles={"Apariencia","Favoritas","Ordenar","Ajustes del TV","Conexiones","Ambiente","Copias","Inicio","Acerca de Velira"};
         String[] subtitles={"Título, reloj y selección","Tus seis esenciales","Cada app en su lugar","Imagen, sonido y más","Wi-Fi y Bluetooth","Un paisaje en reposo","Guardar y recuperar","Estado y recuperación","Diseñado para tu espacio"};
         if(actions.length!=titles.length)throw new IllegalArgumentException("Control actions mismatch");
         a.closePanel();
@@ -18,7 +18,7 @@ final class AuraControlPanel {
         GradientDrawable backdrop=AuraTheme.panel(a,a.px(25));surface.setBackground(backdrop);
         LinearLayout header=new LinearLayout(a);header.setGravity(Gravity.CENTER_VERTICAL);
         LinearLayout words=new LinearLayout(a);words.setOrientation(1);
-        TextView brand=a.text("C A S A   A U R A",10,MainActivity.GOLD);words.addView(brand,new LinearLayout.LayoutParams(-1,a.px(20)));
+        TextView brand=a.text("V E L I R A   T V",10,MainActivity.GOLD);words.addView(brand,new LinearLayout.LayoutParams(-1,a.px(20)));
         TextView title=a.text("Centro de control",29,MainActivity.INK);title.setTypeface(Typeface.create("sans-serif-medium",0));words.addView(title,new LinearLayout.LayoutParams(-1,a.px(43)));
         header.addView(words,new LinearLayout.LayoutParams(0,a.px(66),1));
         TextView close=a.button("×",a::closePanel);close.setTextSize(android.util.TypedValue.COMPLEX_UNIT_PX,a.px(25));close.setContentDescription("Cerrar centro de control");header.addView(close,new LinearLayout.LayoutParams(a.px(42),a.px(42)));
@@ -47,7 +47,12 @@ final class AuraControlPanel {
         close.setNextFocusDownId(cards[2].getId());close.setNextFocusUpId(close.getId());
         TextView hint=a.text("Flechas para explorar   ·   OK para abrir   ·   Atrás para volver",11,MainActivity.MUTED);LinearLayout.LayoutParams hp=new LinearLayout.LayoutParams(-1,a.px(24));hp.topMargin=a.px(14);surface.addView(hint,hp);
         d.setContentView(surface);d.getWindow().setBackgroundDrawableResource(android.R.color.transparent);d.getWindow().setGravity(Gravity.CENTER);d.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-        d.setOnDismissListener(v->a.panelDismissed(d));d.show();d.getWindow().setLayout(a.px(828),a.px(452));d.getWindow().setDimAmount(0.48f);d.getWindow().getDecorView().setSystemUiVisibility(5894);a.activeDialog=d;cards[0].requestFocus();return d;
+        Window window=d.getWindow();
+        WindowManager.LayoutParams attributes=window.getAttributes();
+        attributes.width=a.px(828);attributes.height=a.px(452);attributes.dimAmount=0.48f;
+        window.setAttributes(attributes);
+        window.getDecorView().setSystemUiVisibility(5894);
+        d.setOnDismissListener(v->a.panelDismissed(d));d.show();a.activeDialog=d;cards[0].requestFocus();return d;
     }
 
     private static final class Icon extends View {

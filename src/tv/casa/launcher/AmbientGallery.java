@@ -9,13 +9,16 @@ final class AmbientGallery {
     static final String[] FILES={"landscape.png","ambient-fjord.png","ambient-forest.png"};
     static final String[] NAMES={"Desierto","Fiordo","Bosque"};
     static Bitmap decodeFile(Context context,java.io.File file,int fallback){
+        Bitmap result=decodeFileOnly(context,file);return result!=null?result:decode(context,fallback%FILES.length);
+    }
+    static Bitmap decodeFileOnly(Context context,java.io.File file){
         try{
             BitmapFactory.Options options=new BitmapFactory.Options();options.inJustDecodeBounds=true;BitmapFactory.decodeFile(file.getPath(),options);
-            if(!OnlinePolicy.dimensions(options.outWidth,options.outHeight))return decode(context,fallback%FILES.length);
+            if(!OnlinePolicy.dimensions(options.outWidth,options.outHeight))return null;
             int sample=OnlinePolicy.imageSample(options.outWidth,options.outHeight,context.getResources().getDisplayMetrics().widthPixels,context.getResources().getDisplayMetrics().heightPixels);
             options.inJustDecodeBounds=false;options.inSampleSize=sample;options.inPreferredConfig=Bitmap.Config.RGB_565;options.inScaled=false;
-            Bitmap result=BitmapFactory.decodeFile(file.getPath(),options);return result!=null?result:decode(context,fallback%FILES.length);
-        }catch(Exception error){return decode(context,fallback%FILES.length);}
+            return BitmapFactory.decodeFile(file.getPath(),options);
+        }catch(Exception error){return null;}
     }
     static Bitmap decode(Context context,int index){
         if(index==0)return Assets.landscape(context);

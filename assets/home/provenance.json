@@ -1,0 +1,68 @@
+[
+  {
+    "preset": "classic",
+    "source": "exec-8f21882a-8495-44fd-a358-434de98404e9.png",
+    "sourceDimensions": [
+      1672,
+      941
+    ],
+    "outputDimensions": [
+      1920,
+      1080
+    ],
+    "derived": true,
+    "bytes": 97946,
+    "sha256": "769e72bd546c2746a4d6cf341348be5d13c2070ee5602a9417b7788f9f5c7ec2",
+    "comparison": {
+      "jpg": 233813,
+      "webp": 97946,
+      "png": 1615689
+    },
+    "license": "MIT",
+    "provenance": "Original landscape generated with OpenAI image generation, 2026-10-25. No UI or third-party artwork."
+  },
+  {
+    "preset": "modern",
+    "source": "exec-06fc6304-c671-4219-af7c-e99a7240826f.png",
+    "sourceDimensions": [
+      1672,
+      941
+    ],
+    "outputDimensions": [
+      1920,
+      1080
+    ],
+    "derived": true,
+    "bytes": 156172,
+    "sha256": "5d72fe4a16fd4a3a061bde565db03f13193b4d5727e1d000f706ce207703b94a",
+    "comparison": {
+      "jpg": 323834,
+      "webp": 156172,
+      "png": 1956405
+    },
+    "license": "MIT",
+    "provenance": "Original landscape generated with OpenAI image generation, 2026-10-25. No UI or third-party artwork."
+  },
+  {
+    "preset": "immersive",
+    "source": "exec-30ba1d38-cfae-4368-bd10-3df9e3762a65.png",
+    "sourceDimensions": [
+      1672,
+      941
+    ],
+    "outputDimensions": [
+      1920,
+      1080
+    ],
+    "derived": true,
+    "bytes": 263914,
+    "sha256": "27fabc6475e3b952754be5b5e81089c7feccd2431eb3720da43b7aff104764c2",
+    "comparison": {
+      "jpg": 455250,
+      "webp": 263914,
+      "png": 2423999
+    },
+    "license": "MIT",
+    "provenance": "Original landscape generated with OpenAI image generation, 2026-10-25. No UI or third-party artwork."
+  }
+]

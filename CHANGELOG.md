@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.11.0 · en desarrollo, sin release
+
+- Nueva marca Velira TV, icono/banner originales y adaptación visual de Clásico, Moderno e Inmersivo.
+- Tres fondos originales de Inicio, bandejas comunes, banners de apps asíncronos y navegación con el mando conservada.
+- Transporte MP4 con detección de truncados, validación de rangos y ETag fuerte por sesión.
+- Estados y tokens de Ambiente, foto de respaldo conservada, relevo del decodificador y plazo independiente de preparación.
+- Panel online recuperable al cancelar/regresar, instantáneas de catálogo fuera de UI y descarga incremental a archivo.
+- Comprobación de archivos dañados con crédito correcto y cola de iconos limitada.
+- Pruebas de regresión de transporte y un auxiliar temporal para validar el ciclo de vida en la TV.
+- Release retenida: una tanda rápida coincidió con un SIGSEGV de system_server en Android; se conserva como incidencia abierta. Faltan pruebas prolongadas y mediciones comparables. Véase docs/VELIRA-011-LOCAL.es.md.
+
 ## 0.10.0 · 2026-10-25
 
 - Ambiente organizado en Colecciones, Aspecto, Vídeo y Catálogo.
